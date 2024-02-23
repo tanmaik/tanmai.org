@@ -23,7 +23,15 @@ export default function Home() {
         <div className="flex justify-between mt-10 sm:mt-20 ">
           <div>
             <h1>Tanmai Kalisipudi</h1>
-            <h1 className="text-secondary">Washington, D.C.</h1>
+            <div className="group">
+              {" "}
+              <h1 className="text-secondary group-hover:hidden">
+                tanmai.kalisipudi@gmail.com
+              </h1>
+              <h1 className="text-secondary hidden group-hover:inline">
+                Washington, D.C.
+              </h1>
+            </div>
           </div>
           <h1 className="hidden">Company home -&gt;</h1>
         </div>
@@ -55,6 +63,10 @@ export default function Home() {
         <h1>University of Pittsburgh, B.S. Computer Science</h1>
         <h1 className="text-secondary mt-2">2019 – 2023</h1>
         <h1>Thomas Jefferson High School for Science and Technology</h1>
+
+        <p className="mt-20 text-xs text-secondary font-normal">
+          ©2024 Tanmai Kalisipudi. All rights reserved.
+        </p>
       </div>
     </div>
   );
