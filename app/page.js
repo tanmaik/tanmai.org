@@ -60,9 +60,16 @@ export default function Home() {
         <h1 className="text-secondary mt-2">2019 – 2023</h1>
         <h1>Thomas Jefferson High School for Science and Technology</h1>
 
-        <p className="mt-20 text-xs text-secondary font-normal">
-          ©2024 Tanmai Kalisipudi. All rights reserved.
-        </p>
+        <footer className="mt-20 text-xs text-secondary">
+          <a
+            href="https://www.gradsteps.com/"
+            target="_blank"
+            className="italic underline hover:underline-offset-2"
+          >
+            looking for our company home?
+          </a>
+          <p>©2024 Tanmai Kalisipudi. All rights reserved.</p>
+        </footer>
       </div>
     </div>
   );
