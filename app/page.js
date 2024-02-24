@@ -19,7 +19,7 @@ const Expandable = ({ header, description }) => {
 export default function Home() {
   return (
     <div className="text-sm text-primary">
-      <div className="px-4 w-[25rem]">
+      <div className="px-4 sm:w-[25rem] w-full">
         <div className="flex justify-between mt-4 ">
           <div>
             <h1>tanmai kalisipudi</h1>
