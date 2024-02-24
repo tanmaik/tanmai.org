@@ -22,9 +22,12 @@ export default function Home() {
       <div className="px-4 w-[25rem]">
         <div className="flex justify-between mt-4 ">
           <div>
-            <h1>tanmai kalisipudi</h1>{" "}
-            <h1 className="group-hover:hidden border-b hover:border-black">
-              <a href="mailto:tanmai.kalisipudi@gmail.com">
+            <h1>tanmai kalisipudi</h1>
+            <h1 className="group-hover:hidden ">
+              <a
+                href="mailto:tanmai.kalisipudi@gmail.com"
+                className="border-b hover:border-black"
+              >
                 tanmai.kalisipudi@gmail.com
               </a>
             </h1>
@@ -32,12 +35,12 @@ export default function Home() {
           <h1 className="hidden">Company home -&gt;</h1>
         </div>
 
-        <h1 className="mt-8">Experience</h1>
+        <h1 className="mt-8">experience</h1>
 
-        <h1 className="text-secondary mt-2">Summer 2023</h1>
+        <h1 className="text-secondary mt-2">summer 2023</h1>
 
         <Expandable
-          header="SWE @ Lineaje"
+          header="swe @ Lineaje"
           description="Spearheaded a cybersecurity product from start-to-finish that was
               showcased to over 15,000 professionals at a computer security
               conference at Black Hat USA 2023 in Las Vegas. Developed Python tool using conversational AI and natural language
@@ -46,19 +49,19 @@ export default function Home() {
               chain. Increased ease-of-use for complying with Executive Order
               14028 by over 400% (in terms of speed)."
         />
-        <h1 className="text-secondary mt-2">Summer 2022</h1>
+        <h1 className="text-secondary mt-2">summer 2022</h1>
 
         <Expandable
-          header="Intern @ Cisco"
+          header="intern @ Cisco"
           description="Worked with current Cisco researchers and management to push for a solution to the COVID-induced supply chain crisis using blockchain technology and other Cisco networking solutions such as Meraki and Nexus Dashboard."
         />
 
-        <h1 className="mt-8">Education</h1>
+        <h1 className="mt-8">education</h1>
 
-        <h1 className="text-secondary mt-2">In progress – 2026</h1>
-        <h1>University of Pittsburgh, B.S. Computer Science</h1>
-        <h1 className="text-secondary mt-2">2019 – 2023</h1>
-        <h1>Thomas Jefferson High School for Science and Technology</h1>
+        <h1 className="text-secondary mt-2">in progress until 2026</h1>
+        <h1>university of pittsburgh, b.s. computer science</h1>
+        <h1 className="text-secondary mt-2">graduated in 2023</h1>
+        <h1>thomas jefferson high school for science and technology</h1>
 
         <footer className="mt-20 text-xs text-secondary">
           <a
