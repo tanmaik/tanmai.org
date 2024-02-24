@@ -18,25 +18,21 @@ const Expandable = ({ header, description }) => {
 
 export default function Home() {
   return (
-    <div className="flex justify-center">
-      <div className="px-4 w-[25rem] font-medium">
-        <div className="flex justify-between mt-10 sm:mt-20 ">
+    <div className="text-sm text-primary">
+      <div className="px-4 w-[25rem]">
+        <div className="flex justify-between mt-4 ">
           <div>
-            <h1>Tanmai Kalisipudi</h1>
-            <div className="group">
-              {" "}
-              <h1 className="text-secondary group-hover:hidden">
+            <h1>tanmai kalisipudi</h1>{" "}
+            <h1 className="group-hover:hidden border-b hover:border-black">
+              <a href="mailto:tanmai.kalisipudi@gmail.com">
                 tanmai.kalisipudi@gmail.com
-              </h1>
-              <h1 className="text-secondary hidden group-hover:inline">
-                Washington, D.C.
-              </h1>
-            </div>
+              </a>
+            </h1>
           </div>
           <h1 className="hidden">Company home -&gt;</h1>
         </div>
 
-        <h1 className="text-primary mt-8">Experience</h1>
+        <h1 className="mt-8">Experience</h1>
 
         <h1 className="text-secondary mt-2">Summer 2023</h1>
 
