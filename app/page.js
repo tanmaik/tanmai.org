@@ -67,7 +67,7 @@ export default function Home() {
           <a
             href="https://www.gradsteps.com/"
             target="_blank"
-            className="italic underline hover:underline-offset-2"
+            className="italic underline"
           >
             looking for our company home?
           </a>
