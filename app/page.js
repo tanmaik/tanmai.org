@@ -5,6 +5,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+import Image from "next/image";
+
 const Expandable = ({ header, description }) => {
   return (
     <Accordion type="single" collapsible>
@@ -23,14 +25,46 @@ export default function Home() {
         <div className="flex justify-between mt-4 ">
           <div>
             <h1>tanmai kalisipudi</h1>
-            <h1 className="group-hover:hidden ">
+            <p>
               <a
                 href="mailto:tanmai.kalisipudi@gmail.com"
                 className="border-b hover:border-black"
               >
                 tanmai.kalisipudi@gmail.com
               </a>
-            </h1>
+            </p>
+            <div className="flex gap-2 mt-4 items-center">
+              <a
+                href="https://www.linkedin.com/in/tanmaikalisipudi"
+                target="_blank"
+              >
+                <Image
+                  width={18}
+                  height={20}
+                  className="w-5 h-5"
+                  src="./linkedin.svg"
+                  alt="Linkedin logo"
+                />
+              </a>
+              <a href="https://www.github.com/tanmaik" target="_blank">
+                <Image
+                  width={18}
+                  height={20}
+                  className="w-4 h-4"
+                  src="./github.svg"
+                  alt="Github logo"
+                />
+              </a>
+              <a href="https://www.x.com/nottanmai" target="_blank">
+                <Image
+                  width={18}
+                  height={20}
+                  className="w-4 h-4 ml-1"
+                  src="./x.svg"
+                  alt="X logo"
+                />
+              </a>
+            </div>
           </div>
           <h1 className="hidden">Company home -&gt;</h1>
         </div>
