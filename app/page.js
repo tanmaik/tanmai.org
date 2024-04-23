@@ -99,7 +99,7 @@ export default function Home() {
 
         <footer className="mt-20 text-xs text-secondary">
           <a
-            href="https://www.ashburncomputing.com/"
+            href="https://www.gradsteps.com/"
             target="_blank"
             className="italic underline"
           >
