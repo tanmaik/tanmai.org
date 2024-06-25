@@ -20,90 +20,89 @@ const Expandable = ({ header, description }) => {
 
 export default function Home() {
   return (
-    <div className="text-sm text-primary flex justify-center sm:mt-20">
-      <div className="px-4 sm:w-[30rem] w-full">
-        <div className="flex justify-between mt-4 ">
-          <div>
-            <h1>tanmai kalisipudi</h1>
-            <p>
-              <a
-                href="mailto:tanmai.kalisipudi@gmail.com"
-                className="border-b hover:border-black"
-              >
-                tanmai.kalisipudi@gmail.com
-              </a>
-            </p>
-            <div className="flex gap-2 mt-4 items-center">
-              <a
-                href="https://www.linkedin.com/in/tanmaikalisipudi"
-                target="_blank"
-              >
-                <Image
-                  width={18}
-                  height={20}
-                  className="w-5 h-5"
-                  src="./linkedin.svg"
-                  alt="Linkedin logo"
-                />
-              </a>
-              <a href="https://www.github.com/tanmaik" target="_blank">
-                <Image
-                  width={18}
-                  height={20}
-                  className="w-4 h-4"
-                  src="./github.svg"
-                  alt="Github logo"
-                />
-              </a>
-              <a href="https://www.x.com/nottanmai" target="_blank">
-                <Image
-                  width={18}
-                  height={20}
-                  className="w-4 h-4 ml-1"
-                  src="./x.svg"
-                  alt="X logo"
-                />
-              </a>
-            </div>
+    <div className="flex flex-col justify-between">
+      <div className="flex justify-between mt-4 ">
+        <div>
+          <h1 className="text-[20rem]">tanmai</h1>
+          <h1 className="text-[20rem] -mt-48">kalisipudi</h1>
+          <p>
+            <a
+              href="mailto:tanmai.kalisipudi@gmail.com"
+              className="border-b hover:border-black"
+            >
+              tanmai.kalisipudi@gmail.com
+            </a>
+          </p>
+          <div className="flex gap-2 items-center">
+            <a
+              href="https://www.linkedin.com/in/tanmaikalisipudi"
+              target="_blank"
+            >
+              <Image
+                width={18}
+                height={20}
+                className="w-5 h-5"
+                src="./linkedin.svg"
+                alt="Linkedin logo"
+              />
+            </a>
+            <a href="https://www.github.com/tanmaik" target="_blank">
+              <Image
+                width={18}
+                height={20}
+                className="w-4 h-4"
+                src="./github.svg"
+                alt="Github logo"
+              />
+            </a>
+            <a href="https://www.x.com/nottanmai" target="_blank">
+              <Image
+                width={18}
+                height={20}
+                className="w-4 h-4 ml-1"
+                src="./x.svg"
+                alt="X logo"
+              />
+            </a>
           </div>
-          <h1 className="hidden">Company home -&gt;</h1>
         </div>
+        <h1 className="hidden">Company home -&gt;</h1>
+      </div>
 
-        <h1 className="mt-8">experience</h1>
+      <h1 className="mt-8">experience</h1>
 
-        <h1 className="text-secondary mt-2">now</h1>
-        <Expandable header="ceo @ GradSteps" description="gradsteps.com" />
+      <h1 className="text-secondary mt-2">now</h1>
+      <Expandable header="ceo @ GradSteps" description="gradsteps.com" />
 
-        <h1 className="text-secondary mt-2">summer 2023</h1>
+      <h1 className="text-secondary mt-2">summer 2023</h1>
 
-        <Expandable
-          header="swe @ Lineaje"
-          description="Spearheaded a cybersecurity product from start-to-finish that was
+      <Expandable
+        header="swe @ Lineaje"
+        description="Spearheaded a cybersecurity product from start-to-finish that was
               showcased to over 15,000 professionals at a computer security
               conference at Black Hat USA 2023 in Las Vegas. Developed Python tool using conversational AI and natural language
               processing to translate English queries to scan a Software Bill of
               Materials for vulnerabilities in a customer's software supply
               chain. Increased ease-of-use for complying with Executive Order
               14028 by over 400% (in terms of speed)."
-        />
-        <h1 className="text-secondary mt-2">summer 2022</h1>
+      />
+      <h1 className="text-secondary mt-2">summer 2022</h1>
 
-        <Expandable
-          header="intern @ Cisco"
-          description="Worked with current Cisco researchers and management to push for a solution to the COVID-induced supply chain crisis using blockchain technology and other Cisco networking solutions such as Meraki and Nexus Dashboard."
-        />
+      <Expandable
+        header="intern @ Cisco"
+        description="Worked with current Cisco researchers and management to push for a solution to the COVID-induced supply chain crisis using blockchain technology and other Cisco networking solutions such as Meraki and Nexus Dashboard."
+      />
 
-        <h1 className="mt-8">education</h1>
+      <h1 className="mt-8">education</h1>
 
-        <h1 className="text-secondary mt-2">in progress until 2026</h1>
-        <h1>university of virginia, computer science</h1>
-        <h1 className="text-secondary mt-2">graduated in 2023</h1>
-        <h1>thomas jefferson high school for science and technology</h1>
+      <h1 className="text-secondary mt-2">in progress until 2026</h1>
+      <h1>university of virginia, computer science</h1>
+      <h1 className="text-secondary mt-2">graduated in 2023</h1>
+      <h1>thomas jefferson high school for science and technology</h1>
 
-        <footer className="mt-20 text-xs text-secondary">
-          <p>©2024 tanmai kalisipudi. all rights reserved.</p>
-        </footer>
-      </div>
+      <footer className="mt-20 text-xs text-secondary">
+        <p>©2024 tanmai kalisipudi. all rights reserved.</p>
+      </footer>
     </div>
   );
 }
