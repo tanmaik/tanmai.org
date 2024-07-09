@@ -1,5 +1,3 @@
-"use client";
-import React, { useState, useEffect } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -7,9 +5,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Image from "next/image";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import Secret from "@/components/secret/Secret";
 
 const Expandable = ({ header, description }) => {
   return (
@@ -22,76 +17,9 @@ const Expandable = ({ header, description }) => {
   );
 };
 
-const konamiCode = [
-  "ArrowUp",
-  "ArrowUp",
-  "ArrowDown",
-  "ArrowDown",
-  "ArrowLeft",
-  "ArrowRight",
-  "ArrowLeft",
-  "ArrowRight",
-];
-
 export default function Home() {
-  const [keySequence, setKeySequence] = useState([]);
-  const [showPasswordScreen, setShowPasswordScreen] = useState(false);
-  const [password, setPassword] = useState("");
-  const [showSecretDiv, setShowSecretDiv] = useState(false);
-
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      const newSequence = [...keySequence, event.key];
-      setKeySequence(newSequence.slice(-10));
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [keySequence]);
-
-  useEffect(() => {
-    if (keySequence.join(",") === konamiCode.join(",")) {
-      setShowPasswordScreen(true);
-    }
-  }, [keySequence]);
-
-  const handlePasswordSubmit = (e) => {
-    e.preventDefault();
-    if (password === "johanna0207") {
-      setShowSecretDiv(true);
-      setShowPasswordScreen(false);
-    } else {
-      alert("Incorrect password!");
-    }
-  };
-
   return (
-    <div className="p-4">
-      {showPasswordScreen ? (
-        <div className="fixed inset-0 bg-white z-50 flex items-center justify-center">
-          <form onSubmit={handlePasswordSubmit} className="space-y-4">
-            <Input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter password"
-            />
-            <Button type="submit">Submit</Button>
-          </form>
-        </div>
-      ) : null}
-
-      {showSecretDiv ? (
-        <div className="fixed inset-0 bg-black text-white z-50 flex items-center justify-center">
-          <div>
-            <Secret />
-          </div>
-        </div>
-      ) : null}
-
+    <div className="p-4 text-sm w-[20rem]">
       <div className="flex justify-between mt-4">
         <div>
           <h1>tanmai kalisipudi</h1>
