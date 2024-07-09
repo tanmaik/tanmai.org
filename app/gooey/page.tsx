@@ -14,7 +14,6 @@ export default function Page() {
         onSubmit={async (e) => {
           e.preventDefault();
           const result = await streamComponent(e.currentTarget.input.value);
-          console.log(result);
 
           setComponent(result);
         }}
