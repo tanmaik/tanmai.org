@@ -69,7 +69,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col justify-between min-h-screen">
+    <div className="p-4">
       {showPasswordScreen ? (
         <div className="fixed inset-0 bg-white z-50 flex items-center justify-center">
           <form onSubmit={handlePasswordSubmit} className="space-y-4">
@@ -92,10 +92,9 @@ export default function Home() {
         </div>
       ) : null}
 
-      <div className="flex justify-between mt-4 ">
+      <div className="flex justify-between mt-4">
         <div>
-          <h1 className="text-[20rem]">tanmai</h1>
-          <h1 className="text-[20rem] -mt-48">kalisipudi</h1>
+          <h1>tanmai kalisipudi</h1>
           <p>
             <a
               href="mailto:tanmai.kalisipudi@gmail.com"
