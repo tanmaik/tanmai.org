@@ -41,7 +41,7 @@ export default function Home() {
                 height={20}
                 className="w-5 h-5"
                 src="./linkedin.svg"
-                alt="Linkedin logo"
+                alt="linkedin logo"
               />
             </a>
             <a href="https://www.github.com/tanmaik" target="_blank">
@@ -50,7 +50,7 @@ export default function Home() {
                 height={20}
                 className="w-4 h-4"
                 src="./github.svg"
-                alt="Github logo"
+                alt="github logo"
               />
             </a>
             <a href="https://www.x.com/nottanmai" target="_blank">
@@ -59,17 +59,16 @@ export default function Home() {
                 height={20}
                 className="w-4 h-4 ml-1"
                 src="./x.svg"
-                alt="X logo"
+                alt="x logo"
               />
             </a>
           </div>
         </div>
-        <h1 className="hidden">Company home -&gt;</h1>
       </div>
       <h1 className="mt-8">experience</h1>
       <h1 className="text-secondary mt-2">summer 2024</h1>
       <Expandable 
-        header="founder @ GradSteps" 
+        header="founder @ gradsteps" 
         description={
           <a 
             href="https://gradsteps.com" 
@@ -83,19 +82,19 @@ export default function Home() {
       />
       <h1 className="text-secondary mt-2">summer 2023</h1>
       <Expandable
-        header="swe @ Lineaje"
-        description="Spearheaded a cybersecurity product from start-to-finish that was
+        header="swe @ lineaje"
+        description="spearheaded a cybersecurity product from start-to-finish that was
               showcased to over 15,000 professionals at a computer security
-              conference at Black Hat USA 2023 in Las Vegas. Developed Python tool using conversational AI and natural language
-              processing to translate English queries to scan a Software Bill of
-              Materials for vulnerabilities in a customer's software supply
-              chain. Increased ease-of-use for complying with Executive Order
+              conference at black hat usa 2023 in las vegas. developed python tool using conversational ai and natural language
+              processing to translate english queries to scan a software bill of
+              materials for vulnerabilities in a customer's software supply
+              chain. increased ease-of-use for complying with executive order
               14028 by over 400% (in terms of speed)."
       />
       <h1 className="text-secondary mt-2">summer 2022</h1>
       <Expandable
-        header="intern @ Cisco"
-        description="Worked with current Cisco researchers and management to push for a solution to the COVID-induced supply chain crisis using blockchain technology and other Cisco networking solutions such as Meraki and Nexus Dashboard."
+        header="intern @ cisco"
+        description="worked with current cisco researchers and management to push for a solution to the covid-induced supply chain crisis using blockchain technology and other cisco networking solutions such as meraki and nexus dashboard."
       />
       <h1 className="mt-8">education</h1>
       <h1 className="text-secondary mt-2">in progress until 2026</h1>
