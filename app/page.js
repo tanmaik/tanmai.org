@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Image from "next/image";
+import AgeDisplay from "@/components/AgeDisplay";
 
 const Expandable = ({ header, description }) => {
   return (
@@ -18,11 +19,15 @@ const Expandable = ({ header, description }) => {
 };
 
 export default function Home() {
+  const birthDate = new Date("2005-07-17"); // Replace with your actual birth date
+
   return (
     <div className="p-4 text-sm w-[20rem]">
       <div className="flex justify-between mt-4">
         <div>
           <h1>tanmai kalisipudi</h1>
+
+          <AgeDisplay birthDate={birthDate} />
           <p>
             <a
               href="mailto:tanmai.kalisipudi@gmail.com"
@@ -31,7 +36,8 @@ export default function Home() {
               tanmai.kalisipudi@gmail.com
             </a>
           </p>
-          <div className="flex gap-2 items-center">
+
+          <div className="flex gap-2 mt-2 items-center">
             <a
               href="https://www.linkedin.com/in/tanmaikalisipudi"
               target="_blank"
@@ -67,18 +73,18 @@ export default function Home() {
       </div>
       <h1 className="mt-8">experience</h1>
       <h1 className="text-secondary mt-2">summer 2024</h1>
-      <Expandable 
-        header="founder @ gradsteps" 
+      <Expandable
+        header="founder @ gradsteps"
         description={
-          <a 
-            href="https://gradsteps.com" 
-            target="_blank" 
+          <a
+            href="https://gradsteps.com"
+            target="_blank"
             rel="noopener noreferrer"
             className="border-b hover:border-black"
           >
             gradsteps.com
           </a>
-        } 
+        }
       />
       <h1 className="text-secondary mt-2">summer 2023</h1>
       <Expandable
