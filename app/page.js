@@ -67,8 +67,20 @@ export default function Home() {
         <h1 className="hidden">Company home -&gt;</h1>
       </div>
       <h1 className="mt-8">experience</h1>
-      <h1 className="text-secondary mt-2">now</h1>
-      <Expandable header="ceo @ GradSteps" description="gradsteps.com" />
+      <h1 className="text-secondary mt-2">summer 2024</h1>
+      <Expandable 
+        header="founder @ GradSteps" 
+        description={
+          <a 
+            href="https://gradsteps.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="border-b hover:border-black"
+          >
+            gradsteps.com
+          </a>
+        } 
+      />
       <h1 className="text-secondary mt-2">summer 2023</h1>
       <Expandable
         header="swe @ Lineaje"
@@ -87,12 +99,9 @@ export default function Home() {
       />
       <h1 className="mt-8">education</h1>
       <h1 className="text-secondary mt-2">in progress until 2026</h1>
-      <h1>university of virginia, computer science</h1>
+      <h1>university of virginia, computer science and math</h1>
       <h1 className="text-secondary mt-2">graduated in 2023</h1>
       <h1>thomas jefferson high school for science and technology</h1>
-      <footer className="mt-20 text-xs text-secondary">
-        <p>©2024 tanmai kalisipudi. all rights reserved.</p>
-      </footer>
     </div>
   );
 }
