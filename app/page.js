@@ -5,6 +5,22 @@ export default function Home() {
         <h1 className=" text-5xl sm:text-6xl font-bold text-black">
           tanmai kalisipudi
         </h1>
+        <p className="mt-4 font-sans">
+          just setting up my{" "}
+          <a href="https://x.com/nottanmai" className="underline">
+            twttr
+          </a>
+          . if you are so inclined...
+          <br />
+          <span className="font-mono block sm:hidden">
+            0x8f4af13a9c9bcfcaf00
+            <br />
+            46eb9a8858b3f17661686
+          </span>
+          <span className="font-mono hidden sm:block">
+            0x8f4af13a9c9bcfcaf0046eb9a8858b3f17661686
+          </span>
+        </p>
 
         <p className="mt-4">
           founder of{" "}
@@ -28,11 +44,11 @@ export default function Home() {
         </p>
 
         <p className="mt-4 font-mono font-bold">
-          i make a lot of projects outside of the other things i do (also my{" "}
+          do lots of random stuff too (also my{" "}
           <a href="https://github.com/tanmaik" className="underline">
             github
           </a>{" "}
-          has stuff):
+          ):
         </p>
         <ul className="list-disc font-mono list-inside mt-2 ml-4 space-y-1 ">
           <li>
