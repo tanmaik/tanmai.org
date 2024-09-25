@@ -47,7 +47,7 @@ export default function Home() {
           do lots of random stuff too (also my{" "}
           <a href="https://github.com/tanmaik" className="underline">
             github
-          </a>{" "}
+          </a>
           ):
         </p>
         <ul className="list-disc font-mono list-inside mt-2 ml-4 space-y-1 ">
