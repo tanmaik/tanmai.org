@@ -3,10 +3,22 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: '**',
+        protocol: "https",
+        hostname: "**",
       },
     ],
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/",
+        destination: "https://github.com/tanmaik",
+      },
+      {
+        source: "/friday",
+        destination: "https://friday-beta.vercel.app",
+      },
+    ];
   },
 };
 
