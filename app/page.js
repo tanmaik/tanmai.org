@@ -1,5 +1,8 @@
-import { redirect } from "next/navigation";
-
 export default function Home() {
-  redirect("https://github.com/tanmaik");
+  return (
+    <main className="p-4">
+      <p>tanmai kalisipudi</p>
+      <p>tanmai.kalisipudi@gmail.com</p>
+    </main>
+  );
 }

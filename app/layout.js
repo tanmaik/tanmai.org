@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Tanmai Kalisipudi",
+  title: "tanmai",
 };
 
 export default function RootLayout({ children }) {
