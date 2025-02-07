@@ -19,7 +19,6 @@ export async function GET() {
   const tokenData = await tokenResponse.json();
   const access_token = tokenData.access_token;
 
-  // Now use the new access token to fetch your recent activities
   const activitiesResponse = await fetch(
     'https://www.strava.com/api/v3/athlete/activities?per_page=1',
     {
@@ -30,6 +29,7 @@ export async function GET() {
   );
 
   const activitiesData = await activitiesResponse.json();
+  console.log(activitiesData);
   return new Response(JSON.stringify(activitiesData[0]), {
     headers: { "Content-Type": "application/json" },
   });

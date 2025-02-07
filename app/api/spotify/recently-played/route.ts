@@ -30,6 +30,7 @@ export async function GET() {
   );
 
   const recentlyPlayedData = await recentlyPlayedResponse.json();
+  console.log(recentlyPlayedData);
   return new Response(JSON.stringify(recentlyPlayedData), {
     headers: { "Content-Type": "application/json" },
   });
