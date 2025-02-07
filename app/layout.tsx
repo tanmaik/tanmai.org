@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 
 import localFont from "next/font/local";
@@ -22,6 +23,7 @@ export default function RootLayout({
         <main className="flex justify-center py-10">
           <div className="w-full max-w-2xl px-4">{children}</div>
         </main>
+        <Analytics />
       </body>
     </html>
   );

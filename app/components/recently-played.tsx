@@ -45,7 +45,21 @@ export default function RecentlyPlayed() {
   }, []);
 
   if (error) return <div>Error loading Spotify data.</div>;
-  if (!data || data.items.length === 0) return <div>Loading...</div>;
+  if (!data || data.items.length === 0)
+    return (
+      <div>
+        <div className="flex items-center gap-4">
+          <div className="relative">
+            <div className="w-12 h-12 rounded-full bg-gray-200 animate-pulse" />
+          </div>
+          <div className="space-y-2">
+            <div className="w-32 h-4 bg-gray-200 rounded animate-pulse" />
+            <div className="w-48 h-5 bg-gray-200 rounded animate-pulse" />
+            <div className="w-40 h-4 bg-gray-200 rounded animate-pulse" />
+          </div>
+        </div>
+      </div>
+    );
 
   const recentTrack = data.items[0].track;
 

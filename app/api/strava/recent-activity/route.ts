@@ -29,7 +29,6 @@ export async function GET() {
   );
 
   const activitiesData = await activitiesResponse.json();
-  console.log(activitiesData);
   return new Response(JSON.stringify(activitiesData[0]), {
     headers: { "Content-Type": "application/json" },
   });
