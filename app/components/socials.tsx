@@ -1,6 +1,6 @@
 export default function Socials() {
   return (
-    <div className="flex gap-1  items-center">
+    <div className="flex flex-col items-end">
       <a
         className="underline"
         href="https://x.com/nottanmai"
@@ -31,7 +31,7 @@ export default function Socials() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        email
+        tanmai.kalisipudi@gmail.com
       </a>
     </div>
   );

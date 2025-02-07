@@ -1,15 +1,25 @@
 import Socials from "./components/socials";
+import ImportantStuff from "./components/important-stuff";
+import Writing from "./components/writing";
 
 export default function Home() {
   return (
-    <div className="flex justify-center py-10">
-      <div className="w-full max-w-xl">
-        <p className="font-semibold">Tanmai Kalisipudi</p>
-        <Socials />
-        <p className="mt-2">
-          i&apos;m a cs+math major at the university of virginia.
+    <div>
+      <div className="flex items-end justify-between">
+        <p className="font-semibold text-2xl">
+          hi, i&apos;m <span className="font-bold">tanmai kalisipudi</span>
         </p>
+        <Socials />
       </div>
+      <hr className="my-3" />
+
+      <p className="">
+        currently, im a cs+math major at the university of virginia. i am mainly
+        interested in ai, startups, economics, and politics.
+      </p>
+
+      <ImportantStuff />
+      <Writing />
     </div>
   );
 }
