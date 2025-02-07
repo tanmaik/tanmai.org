@@ -31,7 +31,7 @@ export default function Socials() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        tanmai.kalisipudi@gmail.com
+        gmail
       </a>
     </div>
   );

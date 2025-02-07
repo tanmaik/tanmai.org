@@ -1,4 +1,3 @@
-// app/api/spotify/recently-played/route.ts
 
 export async function GET() {
   const client_id = process.env.SPOTIFY_CLIENT_ID!;
@@ -20,7 +19,7 @@ export async function GET() {
   const tokenData = await tokenResponse.json();
   const access_token = tokenData.access_token;
 
-  // Now use the new access token to fetch your recently played tracks
+
   const recentlyPlayedResponse = await fetch(
     'https://api.spotify.com/v1/me/player/recently-played?limit=5',
     {

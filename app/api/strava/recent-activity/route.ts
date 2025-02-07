@@ -3,7 +3,6 @@ export async function GET() {
   const client_secret = process.env.STRAVA_CLIENT_SECRET!;
   const refresh_token = process.env.STRAVA_REFRESH_TOKEN!;
 
-  // First, get a new access token using the refresh token
   const tokenResponse = await fetch('https://www.strava.com/oauth/token', {
     method: 'POST',
     headers: {
