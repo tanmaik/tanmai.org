@@ -2,8 +2,8 @@ export default function ImportantStuff() {
   return (
     <div className="mt-8">
       <h1 className="text-xl font-semibold">important stuff</h1>
-      <hr className="mt-2" />
-      <div className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-4">
+      <hr className="my-3" />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
           <h3 className="font-medium mb-2">building</h3>
 
