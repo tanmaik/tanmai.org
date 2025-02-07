@@ -18,7 +18,8 @@ interface PageProps {
 const components = {};
 
 export default async function Post({ params }: PageProps) {
-  const { content, title, date } = getPostBySlug(params.slug);
+  const { slug } = await params;
+  const { content, title, date } = await getPostBySlug(slug);
 
   return (
     <>
