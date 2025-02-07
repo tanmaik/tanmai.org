@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Socials from "./components/socials";
 import { getLatestPosts } from "./lib/blog";
+import ImportantStuff from "./components/important-stuff";
+import Writing from "./components/writing";
 
 function ImportantStuff() {
   return (
@@ -113,6 +115,7 @@ function Writing() {
     </div>
   );
 }
+
 export default function Home() {
   return (
     <div>
