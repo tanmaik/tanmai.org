@@ -1,6 +1,12 @@
 import "./globals.css";
 import type { Metadata } from "next";
 
+import localFont from "next/font/local";
+
+const favorit = localFont({
+  src: "./fonts/Favorit.ttf",
+});
+
 export const metadata: Metadata = {
   title: "tanmai's website",
 };
@@ -12,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={favorit.className}>{children}</body>
     </html>
   );
 }
