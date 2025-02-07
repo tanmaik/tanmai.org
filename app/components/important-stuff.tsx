@@ -93,7 +93,7 @@ export default function ImportantStuff() {
               >
                 University of Virginia
               </a>
-              <p>cs+math</p>
+              <p>CS+Math</p>
               <p>now &mdash; 2026</p>
             </li>
             <li className="w-[calc(50%-0.5rem)] md:w-full">

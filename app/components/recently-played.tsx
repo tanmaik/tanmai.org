@@ -80,7 +80,7 @@ export default function RecentlyPlayed() {
           />
         </div>
         <div>
-          <div className="text-sm text-gray-500">Currently listening to</div>
+          <div className="text-sm text-gray-500">last listened to</div>
           <div className="font-medium">{recentTrack.name}</div>
           <div className="text-sm text-gray-500">
             {recentTrack.artists.map((artist) => artist.name).join(", ")}

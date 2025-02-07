@@ -87,7 +87,9 @@ export default function RecentActivity() {
           </div>
         </div>
         <div>
-          <div className="text-sm text-gray-500">Latest activity</div>
+          <div className="text-sm text-gray-500">
+            last time i got out of bed
+          </div>
           <div className="font-medium">{activity.name}</div>
           <div className="text-sm text-gray-500">
             {miles} miles • {timeStr} • {paceStr}/mi
