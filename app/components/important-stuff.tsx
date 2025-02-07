@@ -1,8 +1,4 @@
-import Link from "next/link";
-import Socials from "./components/socials";
-import { getLatestPosts } from "./lib/blog";
-
-function ImportantStuff() {
+export default function ImportantStuff() {
   return (
     <div className="mt-8">
       <h1 className="text-xl font-semibold">important stuff</h1>
@@ -90,47 +86,6 @@ function ImportantStuff() {
           </ul>
         </div>
       </div>
-    </div>
-  );
-}
-
-function Writing() {
-  const latestPosts = getLatestPosts(3);
-  return (
-    <div className="mt-8">
-      <h1 className="text-xl font-semibold">writing</h1>
-      <hr className="mt-4" />
-      <div className="mt-4">
-        {latestPosts.map((post) => (
-          <Link key={post.slug} href={`/blog/${post.slug}`}>
-            {post.title}
-          </Link>
-        ))}
-      </div>
-      <Link href="/blog" className="">
-        view all posts →
-      </Link>
-    </div>
-  );
-}
-export default function Home() {
-  return (
-    <div>
-      <div className="flex items-end justify-between">
-        <p className="font-semibold text-2xl">
-          hi, i&apos;m <span className="font-bold">tanmai kalisipudi</span>
-        </p>
-        <Socials />
-      </div>
-      <hr className="mt-4" />
-
-      <p className="mt-4">
-        currently, im a cs+math major at the university of virginia. i am mainly
-        interested in ai, startups, economics, and politics.
-      </p>
-
-      <ImportantStuff />
-      <Writing />
     </div>
   );
 }
