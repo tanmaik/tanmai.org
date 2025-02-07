@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={favorit.className}>
-        <main className="flex justify-center py-10">
+        <main className="flex justify-center underline-offset-2 py-10">
           <div className="w-full max-w-2xl px-4">{children}</div>
         </main>
         <Analytics />

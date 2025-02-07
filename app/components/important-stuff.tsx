@@ -107,6 +107,10 @@ export default function ImportantStuff() {
               </a>
               <p>2019 &mdash; 2023</p>
             </li>
+            <li className="w-[calc(50%-0.5rem)] md:w-full">
+              <p>AWS Certified Solutions Architect</p>
+              <p>2022</p>
+            </li>
           </ul>
         </div>
       </div>
