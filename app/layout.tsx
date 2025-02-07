@@ -9,7 +9,7 @@ const favorit = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "tanmai kalisipudi",
+  title: "tanmai",
 };
 
 export default function RootLayout({
