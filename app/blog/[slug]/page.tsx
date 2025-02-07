@@ -9,15 +9,13 @@ export async function generateStaticParams() {
   }));
 }
 
-interface PageProps {
-  params: {
-    slug: string;
-  };
-}
-
 const components = {};
 
-export default async function Post({ params }: PageProps) {
+export default async function Post({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const { content, title, date } = await getPostBySlug(slug);
 
