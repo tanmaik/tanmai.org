@@ -5,7 +5,7 @@ export default function ImportantStuff() {
       <hr className="my-3" />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <h3 className="font-medium mb-2">building</h3>
+          <h3 className="font-bold mb-2">building</h3>
 
           <ul className="flex flex-row md:flex-col flex-wrap gap-4">
             <li className="w-[calc(50%-0.5rem)] md:w-full">
@@ -22,16 +22,16 @@ export default function ImportantStuff() {
                   </span>
                 </p>
               </a>
-              <p className="text-">AI undergraduate degree planner</p>
+              <p className="text-">Intelligent undergraduate degree planning</p>
             </li>
             <li className="w-[calc(50%-0.5rem)] md:w-full">
               <p>Pulitzer</p>
-              <p className="text-">AI news</p>
+              <p className="text-">AI news media</p>
             </li>
           </ul>
         </div>
         <div>
-          <h3 className="font-medium mb-2">work</h3>
+          <h3 className="font-bold mb-2">work</h3>
           <ul className="flex flex-row md:flex-col flex-wrap gap-4">
             <li className="w-[calc(50%-0.5rem)] md:w-full">
               <p>Software Engineer Intern</p>
@@ -58,7 +58,7 @@ export default function ImportantStuff() {
           </ul>
         </div>
         <div>
-          <h3 className="font-medium mb-2">learning</h3>
+          <h3 className="font-bold mb-2">learning</h3>
           <ul className="flex flex-row md:flex-col flex-wrap gap-4">
             <li className="w-[calc(50%-0.5rem)] md:w-full">
               <a
