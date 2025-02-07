@@ -24,6 +24,7 @@ export default function Home() {
                 key={post.slug}
                 href={`/blog/${post.slug}`}
                 className="block text-blue-700 underline"
+              
               >
                 {post.title}
               </Link>

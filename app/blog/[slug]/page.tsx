@@ -9,7 +9,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function Post({ params }: { params: { slug: string } }) {
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
+
+export default async function Post({ params }: PageProps) {
   const { content, title, date } = getPostBySlug(params.slug);
 
   return (
