@@ -1,6 +1,8 @@
 import Socials from "./components/socials";
 import ImportantStuff from "./components/important-stuff";
 import Writing from "./components/writing";
+import RecentlyPlayed from "./components/recently-played";
+import RecentActivity from "./components/recent-activity";
 
 export default function Home() {
   return (
@@ -19,11 +21,15 @@ export default function Home() {
       </p>
 
       <p className="mt-2">
-        some more fun stuff i&apos;ve been up to recently: training for a
-        sub-3hr marathon, learning how to play the piano, and dabbling in design
-        / writing. i plan to share more about these things here.
+        some more stuff ive been up to recently: sub-3hr marathon, learning how
+        to play the piano, and dabbling in design / writing. i plan to share
+        more about these things here.
       </p>
 
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+        <RecentlyPlayed />
+        <RecentActivity />
+      </div>
       <ImportantStuff />
       <Writing />
     </div>

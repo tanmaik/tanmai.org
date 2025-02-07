@@ -4,7 +4,7 @@ import { getLatestPosts } from "../lib/blog";
 export default function Writing() {
   const latestPosts = getLatestPosts(3);
   return (
-    <div className="mt-4">
+    <div className="mt-8">
       <div className="flex justify-between items-end">
         <h1 className="text-xl font-semibold">recent posts</h1>
         <Link href="/blog" className="underline">

@@ -23,6 +23,12 @@
 **/*.temp
 **/*.bak
 
+# Image files
+**/*.ico
+**/*.png
+**/*.jpeg
+**/*.jpg
+
 **/*.meta
 **/package-lock.json
 **/bun.lock

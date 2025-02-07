@@ -9,6 +9,15 @@ export default function ImportantStuff() {
 
           <ul className="flex flex-row md:flex-col flex-wrap gap-4">
             <li className="w-[calc(50%-0.5rem)] md:w-full">
+              <p>
+                Pulitzer{" "}
+                <span className="text-emerald-600 text-sm bg-emerald-50 rounded-full px-2 py-1">
+                  ● active
+                </span>
+              </p>
+              <p>AI news media</p>
+            </li>
+            <li className="w-[calc(50%-0.5rem)] md:w-full">
               <a
                 href="https://gradsteps.com"
                 target="_blank"
@@ -22,11 +31,26 @@ export default function ImportantStuff() {
                   </span>
                 </p>
               </a>
-              <p className="text-">Intelligent undergraduate degree planning</p>
+              <p>Intelligent undergraduate degree planning</p>
             </li>
+
             <li className="w-[calc(50%-0.5rem)] md:w-full">
-              <p>Pulitzer</p>
-              <p className="text-">AI news media</p>
+              <a
+                href="https://www.conradchallenge.org/2022virtualfinalists/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-500 transition-colors duration-200 group underline hover:underline decoration-black/75 hover:decoration-gray-500"
+              >
+                <p className="">
+                  Electralert
+                  <span className="ml-1 group-hover:translate-x-1 group-hover:-translate-y-1 inline-block transition-transform duration-200">
+                    ↗
+                  </span>
+                </p>
+              </a>
+              <p>
+                <i>Patent pending</i> EEG-based driver alert system
+              </p>
             </li>
           </ul>
         </div>
@@ -70,7 +94,7 @@ export default function ImportantStuff() {
                 University of Virginia
               </a>
               <p>cs+math</p>
-              <p className="text-">now &mdash; 2026</p>
+              <p>now &mdash; 2026</p>
             </li>
             <li className="w-[calc(50%-0.5rem)] md:w-full">
               <a
@@ -81,7 +105,7 @@ export default function ImportantStuff() {
               >
                 Thomas Jefferson High School for Science and Technology
               </a>
-              <p className="text-">2019 &mdash; 2023</p>
+              <p>2019 &mdash; 2023</p>
             </li>
           </ul>
         </div>
