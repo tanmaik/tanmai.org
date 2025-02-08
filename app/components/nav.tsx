@@ -21,35 +21,35 @@ export default function Nav() {
       </div>
       <div className="flex flex-col items-end">
         <a
-          className="underline hover:text-gray-500 transition-colors duration-200 group"
+          className="group"
           href="https://x.com/nottanmai"
           target="_blank"
           rel="noopener noreferrer"
         >
-          x
-          <span className="ml-1 group-hover:translate-x-1 group-hover:-translate-y-1 inline-block transition-transform duration-200">
+          <span className="underline hover:text-gray-500 transition-colors duration-200">x</span>
+          <span className="ml-1 group-hover:translate-x-1 group-hover:-translate-y-1 inline-block transition-transform duration-200 hidden sm:inline no-underline">
             ↗
           </span>
         </a>
         <a
-          className="underline hover:text-gray-500 transition-colors duration-200 group"
+          className="group"
           href="https://github.com/tanmaik"
           target="_blank"
           rel="noopener noreferrer"
         >
-          github
-          <span className="ml-1 group-hover:translate-x-1 group-hover:-translate-y-1 inline-block transition-transform duration-200">
+          <span className="underline hover:text-gray-500 transition-colors duration-200">github</span>
+          <span className="ml-1 group-hover:translate-x-1 group-hover:-translate-y-1 inline-block transition-transform duration-200 hidden sm:inline no-underline">
             ↗
           </span>
         </a>
         <a
-          className="underline hover:text-gray-500 transition-colors duration-200 group"
+          className="group"
           href="https://linkedin.com/in/tanmaikalisipudi"
           target="_blank"
           rel="noopener noreferrer"
         >
-          linkedin
-          <span className="ml-1 group-hover:translate-x-1 group-hover:-translate-y-1 inline-block transition-transform duration-200">
+          <span className="underline hover:text-gray-500 transition-colors duration-200">linkedin</span>
+          <span className="ml-1 group-hover:translate-x-1 group-hover:-translate-y-1 inline-block transition-transform duration-200 hidden sm:inline no-underline">
             ↗
           </span>
         </a>

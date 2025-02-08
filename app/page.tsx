@@ -11,7 +11,7 @@ export default function Home() {
       <div className="flex items-end justify-between">
         <div>
           <LocationFlipper />
-          <p className="font-semibold text-2xl">
+          <p className="font-semibold text-lg sm:text-2xl">
             hi, i&apos;m <span className="font-bold">tanmai kalisipudi</span>
           </p>
         </div>
