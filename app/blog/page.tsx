@@ -6,17 +6,22 @@ export default function BlogIndex() {
 
   return (
     <>
-      <h1 className="text-2xl font-bold mb-8">Blog Posts</h1>
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-bold">blog</h1>
+        <Link href="/" className="underline">
+          <p> home</p>
+        </Link>
+      </div>
+      <hr className="my-3" />
       <div className="space-y-6">
         {posts.map((post) => (
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
-            className="block p-6 border rounded-lg hover:bg-gray-50 transition-colors"
+            className="block hover:underline"
           >
-            <h2 className="text-xl font-medium">{post.title}</h2>
-            <p className="text-gray-600 mt-2">{post.description}</p>
-            <p className="text-sm text-gray-500 mt-2">{post.date}</p>
+            <h2 className="font-medium">{post.title}</h2>
+            <p className="text-sm text-gray-500 mt-1">{post.date}</p>
           </Link>
         ))}
       </div>
