@@ -15,7 +15,7 @@ export default function ImportantStuff() {
                   ● active
                 </span>
               </p>
-              <p>AI intelligence</p>
+              <p>AI media</p>
             </li>
             <li className="w-[calc(50%-0.5rem)] md:w-full">
               <a
@@ -63,9 +63,12 @@ export default function ImportantStuff() {
                 href="https://lineaje.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text- underline"
+                className="hover:text-gray-500 transition-colors duration-200 group underline hover:underline decoration-black/75 hover:decoration-gray-500"
               >
                 Lineaje
+                <span className="ml-1 group-hover:translate-x-1 group-hover:-translate-y-1 inline-block transition-transform duration-200">
+                  ↗
+                </span>
               </a>
             </li>
             <li className="w-[calc(50%-0.5rem)] md:w-full">
@@ -74,9 +77,12 @@ export default function ImportantStuff() {
                 href="https://cisco.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text- underline"
+                className="hover:text-gray-500 transition-colors duration-200 group underline hover:underline decoration-black/75 hover:decoration-gray-500"
               >
                 Cisco
+                <span className="ml-1 group-hover:translate-x-1 group-hover:-translate-y-1 inline-block transition-transform duration-200">
+                  ↗
+                </span>
               </a>
             </li>
           </ul>
@@ -89,9 +95,12 @@ export default function ImportantStuff() {
                 href="https://virginia.edu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" underline"
+                className="hover:text-gray-500 transition-colors duration-200 group underline hover:underline decoration-black/75 hover:decoration-gray-500"
               >
                 University of Virginia
+                <span className="ml-1 group-hover:translate-x-1 group-hover:-translate-y-1 inline-block transition-transform duration-200">
+                  ↗
+                </span>
               </a>
               <p>CS+Math</p>
               <p>now &mdash; 2026</p>
@@ -101,9 +110,12 @@ export default function ImportantStuff() {
                 href="https://tjhsst.fcps.edu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" underline"
+                className="hover:text-gray-500 transition-colors duration-200 group underline hover:underline decoration-black/75 hover:decoration-gray-500"
               >
                 Thomas Jefferson High School for Science and Technology
+                <span className="ml-1 group-hover:translate-x-1 group-hover:-translate-y-1 inline-block transition-transform duration-200">
+                  ↗
+                </span>
               </a>
               <p>2019 &mdash; 2023</p>
             </li>

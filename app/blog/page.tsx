@@ -8,8 +8,11 @@ export default function BlogIndex() {
     <>
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold">blog</h1>
-        <Link href="/" className="underline">
-          <p> home</p>
+        <Link
+          href="/"
+          className="underline hover:text-gray-500 transition-colors duration-200"
+        >
+          <p>home</p>
         </Link>
       </div>
       <hr className="my-3" />
@@ -18,7 +21,7 @@ export default function BlogIndex() {
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
-            className="block hover:underline"
+            className="block underline hover:text-gray-500 transition-colors duration-200"
           >
             <h2 className="font-medium">{post.title}</h2>
             <p className="text-sm text-gray-500 mt-1">{post.date}</p>

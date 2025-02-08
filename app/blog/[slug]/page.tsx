@@ -21,7 +21,10 @@ export default async function Post({
 
   return (
     <>
-      <Link href="/blog" className="text-blue-600 hover:underline mb-4 block">
+      <Link
+        href="/blog"
+        className="underline hover:text-gray-500 transition-colors duration-200 mb-4 block"
+      >
         ← Back to all posts
       </Link>
       <article className="prose prose-slate max-w-none">

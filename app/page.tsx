@@ -1,4 +1,4 @@
-import Socials from "./components/socials";
+import Socials from "./components/nav";
 import ImportantStuff from "./components/important-stuff";
 import Writing from "./components/writing";
 import RecentlyPlayed from "./components/recently-played";
