@@ -15,7 +15,7 @@ export default function ImportantStuff() {
                   ● active
                 </span>
               </p>
-              <p>AI news media</p>
+              <p>AI intelligence</p>
             </li>
             <li className="w-[calc(50%-0.5rem)] md:w-full">
               <a

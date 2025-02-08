@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 
 export default function LocationFlipper() {
   const [location, setLocation] = useState("charlottesville, va");
-  const locations = ["charlottesville, va", "northern virginia"];
+  const locations = ["charlottesville va", "washington dc"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -14,7 +14,7 @@ export default function LocationFlipper() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [locations]);
 
   return (
     <div className="h-[24px] relative">
