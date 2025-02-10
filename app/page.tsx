@@ -4,7 +4,7 @@ import Writing from "./components/writing";
 import RecentlyPlayed from "./components/recently-played";
 import RecentActivity from "./components/recent-activity";
 import LocationFlipper from "./components/location-flipper";
-
+import Wakatime from "./components/wakatime";
 export default function Home() {
   return (
     <div>
