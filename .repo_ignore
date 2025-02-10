@@ -1,6 +1,8 @@
 # Default fallback .repo_ignore content
 **/node_modules/
 **/.npm/
+**/.next/
+**/temp/
 **/__pycache__/
 **/.pytest_cache/
 **/.mypy_cache/
@@ -29,6 +31,7 @@
 **/*.jpeg
 **/*.jpg
 
+**/*.db
 **/*.meta
 **/package-lock.json
 **/bun.lock

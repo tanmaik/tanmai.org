@@ -4,7 +4,9 @@ import Writing from "./components/writing";
 import RecentlyPlayed from "./components/recently-played";
 import RecentActivity from "./components/recent-activity";
 import LocationFlipper from "./components/location-flipper";
-import Wakatime from "./components/wakatime";
+import CodingActivity from "./components/coding-activity";
+import CodingLanguages from "./components/coding-languages";
+
 export default function Home() {
   return (
     <div>
@@ -33,6 +35,8 @@ export default function Home() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
         <RecentlyPlayed />
         <RecentActivity />
+        <CodingActivity />
+        <CodingLanguages />
       </div>
       <ImportantStuff />
       <Writing />
