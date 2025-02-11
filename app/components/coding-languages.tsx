@@ -78,7 +78,9 @@ export default function CodingLanguages() {
           </div>
         </div>
         <div>
-          <div className="text-sm text-gray-500">top languages</div>
+          <div className="text-sm text-gray-500">
+            breakdown of languages i code in
+          </div>
           <div className="font-medium" style={{ color: firstLang.color }}>
             {firstLang.name} ({firstLang.percent.toFixed(1)}%)
           </div>

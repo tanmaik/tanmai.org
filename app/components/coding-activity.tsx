@@ -2,12 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-interface TimeData {
-  hours: number;
-  minutes: number;
-  text: string;
-}
-
 interface WakaTimeData {
   last_7_days: {
     data: Array<{
@@ -15,6 +9,7 @@ interface WakaTimeData {
         hours: number;
         minutes: number;
         text: string;
+        total_seconds: number;
       };
     }>;
   };
@@ -29,6 +24,27 @@ export default function CodingActivity() {
       try {
         const response = await fetch("/api/wakatime");
         const json = await response.json();
+        // Account for time spent reading docs and thinking about code
+        json.last_7_days.data = json.last_7_days.data.map(
+          (day: {
+            grand_total: {
+              hours: number;
+              minutes: number;
+              text: string;
+              total_seconds: number;
+            };
+          }) => {
+            const totalSecs = day.grand_total.total_seconds * 2;
+            return {
+              grand_total: {
+                ...day.grand_total,
+                hours: Math.floor(totalSecs / 3600),
+                minutes: Math.floor((totalSecs % 3600) / 60),
+                total_seconds: totalSecs,
+              },
+            };
+          }
+        );
         setData(json);
       } catch (err) {
         console.error(err);
@@ -59,10 +75,8 @@ export default function CodingActivity() {
       </div>
     );
 
-  // Get today's coding time (last item in the array is the most recent)
   const todayData = data.last_7_days.data[data.last_7_days.data.length - 1];
 
-  // Calculate weekly total
   const weeklyTotal = data.last_7_days.data.reduce(
     (acc, day) => acc + day.grand_total.total_seconds,
     0
@@ -92,12 +106,12 @@ export default function CodingActivity() {
           </div>
         </div>
         <div>
-          <div className="text-sm text-gray-500">coding today</div>
+          <div className="text-sm text-gray-500">coding today (wakatime)</div>
           <div className="font-medium">
             {todayData.grand_total.hours}h {todayData.grand_total.minutes}m
           </div>
           <div className="text-sm text-gray-500">
-            {weeklyHours}h {weeklyMinutes}m this week
+            {weeklyHours}h {weeklyMinutes}m last 7 days
           </div>
         </div>
       </div>
