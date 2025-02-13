@@ -9,13 +9,23 @@ export default function ImportantStuff() {
 
           <ul className="flex flex-row md:flex-col flex-wrap gap-4">
             <li className="w-[calc(50%-0.5rem)] md:w-full">
-              <p>
-                Pulitzer{" "}
+              <a
+                href="https://vecnews.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
                 <span className="text-emerald-600 text-sm bg-emerald-50 rounded-full px-2 py-1">
                   ● active
                 </span>
-              </p>
-              <p>AI media</p>
+                <span className=" inline-block transition-transform underline hover:text-gray-500 duration-200">
+                  vec
+                  <span className="ml-1 group-hover:translate-x-1 group-hover:-translate-y-1 inline-block transition-transform duration-200">
+                    ↗
+                  </span>
+                </span>
+              </a>
+              <p>AI news media</p>
             </li>
             <li className="w-[calc(50%-0.5rem)] md:w-full">
               <a
