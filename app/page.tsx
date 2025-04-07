@@ -10,15 +10,14 @@ export default function Home() {
           </p>
           <h2 className="text-xl font-bold mt-8">previously</h2>
           <p className="mt-4">
-            i was a software engineering intern at lineaje where i spearheaded
-            their flagship agentic llm product and developed tools using
-            langchain and fine-tuned llms to improve enterprise customer
-            compliance.
+            in 2024, i was a software engineering intern at lineaje where i
+            spearheaded their flagship agentic llm product using langchain and
+            fine-tuned llms to improve instruction following.
           </p>
           <p className="mt-4">
             before that, i interned at cisco systems where i worked on
             optimizing shipping crate storage during the covid supply chain
-            crisis using cisco meraki and nexus dashboard.
+            crisis using cisco&apos;s meraki and nexus dashboard.
           </p>
           <p className="mt-4">
             i&apos;ve also worked on several projects including{" "}
@@ -31,8 +30,7 @@ export default function Home() {
             </a>{" "}
             (an automated degree planner), tjrides (a carpool platform for high
             school students), and electralert (a drowsy driving detection system
-            using eeg). these projects involved technologies like aws, react,
-            next.js, and machine learning.
+            using eeg).
           </p>
         </div>
       </main>
