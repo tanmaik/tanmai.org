@@ -21,8 +21,15 @@ export default function Home() {
             crisis using cisco meraki and nexus dashboard.
           </p>
           <p className="mt-4">
-            i&apos;ve also worked on several projects including gradsteps (an
-            automated degree planner), tjrides (a carpool platform for high
+            i&apos;ve also worked on several projects including{" "}
+            <a
+              href="https://gradsteps.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              gradsteps
+            </a>{" "}
+            (an automated degree planner), tjrides (a carpool platform for high
             school students), and electralert (a drowsy driving detection system
             using eeg). these projects involved technologies like aws, react,
             next.js, and machine learning.
