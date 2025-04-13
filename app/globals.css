@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: 'Times New Roman', serif;
+}
+
+@layer components {
+  .list-circle {
+    list-style-type: circle;
+  }
+}
