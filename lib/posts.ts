@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Robbers from '../app/components/writing/robbers';
+import CollegeAI from '../components/writing/college-ai';
 
 export interface BlogPost {
   id: string;
@@ -11,11 +11,11 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    id: 'robbers',
-    title: 'Robbers',
-    component: Robbers,
+    id: 'college-student-ai-age',
+    title: 'What to Do as a College Student in the AI Age',
+    component: CollegeAI,
     date: '2025-04-14',
-    slug: 'robbers'
+    slug: 'college-student-ai-age'
   },
 ];
 
