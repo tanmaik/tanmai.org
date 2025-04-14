@@ -1,16 +1,22 @@
-export default function Home() {
-  return (
-    <>
-      <main className="flex items-center justify-center">
-        <div className="w-full px-4 max-w-xl">
-          <h1 className="text-2xl font-bold mt-14">tanmai kalisipudi</h1>
+import Link from "next/link";
+import { getAllBlogPosts } from "./thoughts/posts";
+import { formatDistanceToNow } from "date-fns";
 
-          <p className="mt-4">
-            i&apos;m currently a CS+math at The University of Virginia. i&apos;m
-            very interested in AI and the future of work.
-          </p>
-          <p className="mt-2">
-            for more about my work:{" "}
+export default function Home() {
+  const blogPosts = getAllBlogPosts();
+
+  return (
+    <div className="leading-relaxed m-0 p-0">
+      <div className="w-full max-w-2xl mx-auto p-5 pt-10">
+        <h1 className="text-4xl font-bold text-center mb-4">
+          Tanmai Kalisipudi
+        </h1>
+
+        <div className="mb-6">
+          <p className="">
+            I&apos;m currently a CS+math at The University of Virginia. I&apos;m
+            very interested in AI and the future of work. For more about my
+            work:{" "}
             <a
               className="text-blue-600 underline"
               target="_blank"
@@ -45,7 +51,23 @@ export default function Home() {
             .
           </p>
         </div>
-      </main>
-    </>
+
+        <h2 className="text-2xl font-bold mb-2">Thoughts</h2>
+        <div className="space-y-4">
+          {blogPosts.map((post) => (
+            <Link key={post.id} href={`/thoughts/${post.slug}`}>
+              <div className="flex gap-2">
+                <h3 className="underline text-blue-600">{post.title}</h3>
+                <p>
+                  {formatDistanceToNow(new Date(post.date), {
+                    addSuffix: true,
+                  })}
+                </p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
