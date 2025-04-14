@@ -4,9 +4,9 @@ import Link from "next/link";
 import { formatDistanceToNow } from "date-fns";
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export function generateStaticParams() {
@@ -16,8 +16,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = getBlogPostBySlug(params.slug);
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const resolvedParams = await params;
+  const post = getBlogPostBySlug(resolvedParams.slug);
 
   if (!post) {
     notFound();
