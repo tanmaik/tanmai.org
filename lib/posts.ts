@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Robbers from './robbers';
+import Robbers from '../app/components/writing/robbers';
 
 export interface BlogPost {
   id: string;

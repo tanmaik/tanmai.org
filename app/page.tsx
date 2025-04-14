@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllBlogPosts } from "./thoughts/posts";
+import { getAllBlogPosts } from "../lib/posts";
 import { formatDistanceToNow } from "date-fns";
 
 export default function Home() {
@@ -55,7 +55,7 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-2">Thoughts</h2>
         <div className="space-y-4">
           {blogPosts.map((post) => (
-            <Link key={post.id} href={`/thoughts/${post.slug}`}>
+            <Link key={post.id} href={`/${post.slug}`}>
               <div className="flex gap-2">
                 <h3 className="underline text-blue-600">{post.title}</h3>
                 <p>

@@ -1,4 +1,4 @@
-import { getBlogPostBySlug, getAllBlogPosts } from "../posts";
+import { getBlogPostBySlug, getAllBlogPosts } from "../../lib/posts";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { formatDistanceToNow } from "date-fns";
