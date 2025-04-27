@@ -1,5 +1,7 @@
-import { redirect } from 'next/navigation'
-
 export default function Home() {
-  redirect('https://tanmaik.substack.com/about')
+  return (
+    <div className="flex justify-center items-center h-screen text-2xl">
+      tanmai kalisipudi
+    </div>
+  );
 }
