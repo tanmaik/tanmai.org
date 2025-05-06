@@ -19,7 +19,8 @@ export default function RootLayout({
             <h1 className="text-3xl font-bold mb-2 text-[#EEE]">tanmai kalisipudi</h1>
             <nav className="mb-6">
               <Link href="/" className="mr-4 text-[#8BC3DD] hover:underline">Home</Link>
-              <a href="/blog" className="text-[#8BC3DD] hover:underline">Blog</a>
+              <Link href="/blog" className="mr-4 text-[#8BC3DD] hover:underline">Blog</Link>
+              <Link href="/ai-mode" className="text-[#8BC3DD] hover:underline">AI Mode</Link>
             </nav>
           </header>
           <main className="w-full max-w-3xl mx-auto flex-1 text-[#ddd] px-4 sm:px-6">

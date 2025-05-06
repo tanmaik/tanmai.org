@@ -33,13 +33,21 @@ export default function Blog() {
           <p className="text-[#ddd] italic">No posts yet. Check back soon!</p>
         ) : (
           <ul className="list-disc list-inside space-y-2">
-            {posts.map((post) => (
-              <li key={`${post.slug}-toc`}>
-                <a href={`#${post.slug}`} className="text-[#8BC3DD] text-lg hover:underline">
-                  {post.title}
-                </a>
-              </li>
-            ))}
+            {posts.map((post) => {
+              // Parse date string as local date components
+              const [year, month, day] = post.date.split('-').map(Number);
+              const localDate = new Date(year, month - 1, day);
+              return (
+                <li key={`${post.slug}-toc`}>
+                  <a href={`#${post.slug}`} className="text-[#8BC3DD] text-lg hover:underline">
+                    {post.title}
+                  </a>
+                  <span className="text-[#ddd] ml-2 text-sm">
+                    ({localDate.toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' })})
+                  </span>
+                </li>
+              );
+            })}
           </ul>
         )}
       </div>
@@ -47,17 +55,29 @@ export default function Blog() {
       {/* Blog Posts */}
       {posts.length > 0 && (
         <div className="space-y-10">
-          {posts.map((post) => (
-            <div key={post.slug} id={post.slug} className="text-xl scroll-mt-20">
-              <div className="flex items-center space-x-4">
-                <span className="text-[#ddd]">{new Date(post.date).toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' })}</span>
-                <span className="text-[#EEE]">{post.title}</span>
+          {posts.map((post) => {
+            // Parse date string as local date components
+            const [year, month, day] = post.date.split('-').map(Number);
+            const localDate = new Date(year, month - 1, day);
+            return (
+              <div key={post.slug} id={post.slug} className="text-xl scroll-mt-20">
+                <div className="flex flex-col items-start space-y-1">
+                  <span className="text-[#ddd] text-xs">{localDate.toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' })}</span>
+                  <span className="text-[#EEE]">{post.title}</span>
+                </div>
+                <div className="mt-4 markdown-content">
+                  <ReactMarkdown components={{
+                    h1: ({node, ...props}) => <h1 className="text-2xl font-bold text-[#EEE] my-4" {...props} />,
+                    h2: ({node, ...props}) => <h2 className="text-xl font-bold text-[#EEE] my-3" {...props} />,
+                    h3: ({node, ...props}) => <h3 className="text-lg font-bold text-[#EEE] my-2" {...props} />,
+                    p: ({node, ...props}) => <p className="text-base text-[#ddd] my-2" {...props} />
+                  }}>
+                    {post.content}
+                  </ReactMarkdown>
+                </div>
               </div>
-              <div className="mt-3 text-base text-[#ddd]">
-                <ReactMarkdown>{post.content}</ReactMarkdown>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       )}
     </div>
