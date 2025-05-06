@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased font-[Verdana] min-h-screen bg-[#01242E]">
+      <body className="antialiased min-h-screen bg-[#01242E]">
         <div className="flex flex-col items-center min-h-screen w-full">
           <header className="mt-8 mb-2 w-full max-w-3xl mx-auto px-4 sm:px-6">
             <h1 className="text-3xl font-bold mb-2 text-[#EEE]">tanmai kalisipudi</h1>

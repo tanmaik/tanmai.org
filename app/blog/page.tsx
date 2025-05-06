@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import ReactMarkdown from 'react-markdown';
+import Link from 'next/link';
 
 const postsDirectory = path.join(process.cwd(), 'app/blog/posts');
 
@@ -10,76 +10,57 @@ function getPosts() {
   return fileNames.map((fileName) => {
     const filePath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(filePath, 'utf8');
-    const { data, content } = matter(fileContents);
+    const { data } = matter(fileContents);
     return {
-      slug: fileName.replace(/\\.md$/, ''),
+      slug: fileName.replace(/\.md$/, ''),
       title: data.title,
       date: data.date,
-      content,
     };
-  });
+  }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export default function Blog() {
   const posts = getPosts();
+  
   return (
-    <div>
-      <p className="text-[#ddd] mb-6 italic">All posts on one page for the LLMs.</p>
-      
-      {/* Table of Contents */}
-      <div className="mb-10">
-        <h2 className="text-2xl font-semibold mb-3 text-[#EEE]">Table of Contents</h2>
-        {posts.length === 0 ? (
-          <p className="text-[#ddd] italic">No posts yet. Check back soon!</p>
-        ) : (
-          <ul className="list-disc list-inside space-y-2">
-            {posts.map((post) => {
-              // Parse date string as local date components
-              const [year, month, day] = post.date.split('-').map(Number);
-              const localDate = new Date(year, month - 1, day);
-              return (
-                <li key={`${post.slug}-toc`}>
-                  <a href={`#${post.slug}`} className="text-[#8BC3DD] text-lg hover:underline">
-                    {post.title}
-                  </a>
-                  <span className="text-[#ddd] ml-2 text-sm">
-                    ({localDate.toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' })})
-                  </span>
-                </li>
-              );
-            })}
-          </ul>
-        )}
+    <div className="flex flex-col">
+      {/* Blog title removed as per instructions */}
+      <div className="mb-4">
+        <input 
+          type="text" 
+          placeholder="Search..."
+          className="px-2 py-1 w-44 rounded bg-[#01242E] border border-[#345] text-[#ddd]"
+        />
       </div>
-
-      {/* Blog Posts */}
-      {posts.length > 0 && (
-        <div className="space-y-10">
-          {posts.map((post) => {
-            // Parse date string as local date components
-            const [year, month, day] = post.date.split('-').map(Number);
-            const localDate = new Date(year, month - 1, day);
-            return (
-              <div key={post.slug} id={post.slug} className="text-xl scroll-mt-20">
-                <div className="flex flex-col items-start space-y-1">
-                  <span className="text-[#ddd] text-xs">{localDate.toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' })}</span>
-                  <span className="text-[#EEE]">{post.title}</span>
+      
+      <div className="space-y-0">
+        {posts.map((post) => {
+          const formatDateParts = (dateString: string) => {
+            const [year, month, day] = dateString.split('-');
+            const dateObj = new Date(Number(year), Number(month) - 1, Number(day));
+            const dayStr = String(day).padStart(2, '0');
+            const monthStr = dateObj.toLocaleString('default', { month: 'short' });
+            return { day: dayStr, month: monthStr, year };
+          };
+          
+          const { day, month, year } = formatDateParts(post.date);
+          
+          return (
+            <div key={post.slug} className="py-1">
+              <div className="flex">
+                <div className="w-36 pr-2 text-[#aaa] tabular-nums">
+                  {`${day} ${month}, ${year}`}
                 </div>
-                <div className="mt-4 markdown-content">
-                  <ReactMarkdown components={{
-                    h1: ({node, ...props}) => <h1 className="text-2xl font-bold text-[#EEE] my-4" {...props} />,
-                    h2: ({node, ...props}) => <h2 className="text-xl font-bold text-[#EEE] my-3" {...props} />,
-                    h3: ({node, ...props}) => <h3 className="text-lg font-bold text-[#EEE] my-2" {...props} />,
-                    p: ({node, ...props}) => <p className="text-base text-[#ddd] my-2" {...props} />
-                  }}>
-                    {post.content}
-                  </ReactMarkdown>
+                <div>
+                  <Link href={`/blog/${post.slug}`} className="text-[#8BC3DD] hover:underline">
+                    {post.title}
+                  </Link>
                 </div>
               </div>
-            );
-          })}
-        </div>
-      )}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
-} 
+}
