@@ -10,9 +10,22 @@
 		31C9D7532DC8228500E84809 /* location.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = location.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3168BE112DC9E89D00C1A78A /* Exceptions for "location" folder in "location" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 31C9D7522DC8228500E84809 /* location */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		31C9D7552DC8228500E84809 /* location */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3168BE112DC9E89D00C1A78A /* Exceptions for "location" folder in "location" target */,
+			);
 			path = location;
 			sourceTree = "<group>";
 		};
