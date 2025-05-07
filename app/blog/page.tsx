@@ -25,7 +25,6 @@ export default function Blog() {
   
   return (
     <div className="flex flex-col">
-      {/* Blog title removed as per instructions */}
       <div className="mb-4">
         <input 
           type="text" 
