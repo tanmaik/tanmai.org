@@ -20,24 +20,34 @@ function getPosts() {
   }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-export default function Blog() {
+export default function Blog({ searchParams }: { searchParams: { search?: string } }) {
   const posts = getPosts();
+  const { search } = searchParams;
+  const filteredPosts = search
+    ? posts.filter((post) =>
+        post.title.toLowerCase().includes(search.toLowerCase())
+      )
+    : posts;
   
   return (
     <div className="flex flex-col">
       <div className="mb-4">
-        <input 
-          type="text" 
-          placeholder="Search..."
-          className="px-2 py-1 w-44 rounded bg-[#01242E] border border-[#345] text-[#ddd]"
-        />
+        <form method="get">
+          <input
+            type="text" 
+            name="search"
+            defaultValue={search || ''}
+            placeholder="Search..."
+            className="px-2 py-1 w-44 rounded bg-[#01242E] border border-[#345] text-[#ddd]"
+          />
+        </form>
       </div>
       
-      {posts.length === 0 ? (
+      {filteredPosts.length === 0 ? (
         <p className="text-[#555] italic py-2">No posts available yet.</p>
       ) : (
         <div className="space-y-0">
-          {posts.map((post) => {
+          {filteredPosts.map((post) => {
             const formatDateParts = (dateString: string) => {
               const [year, month, day] = dateString.split('-');
               const dateObj = new Date(Number(year), Number(month) - 1, Number(day));
