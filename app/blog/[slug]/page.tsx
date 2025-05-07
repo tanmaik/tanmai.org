@@ -42,8 +42,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <div className="bg-yellow-900/20 border border-yellow-600/50 p-4 rounded-md text-[#ddd]">
           <p className="text-yellow-400 mb-2">🚧 This article is currently a work-in-progress.</p>
           <p>
-            If you'd like early access to my thoughts or have feedback, feel free to{' '}
-            <a href="mailto:tanmai.kalisipudi@gmail.com" className="text-[#8BC3DD] hover:underline">contact me</a>.
+            For early access or feedback,{' '}
+            <a href="mailto:tanmai.kalisipudi@gmail.com" className="text-[#8BC3DD] hover:underline">reach out</a>.
           </p>
         </div>
       ) : (
