@@ -1,8 +1,0 @@
----
-description: When updating styling elements
-globs: 
-alwaysApply: false
----
-# Style Update Rule
-
-When updating styles for any given page, always check and update both the corresponding `[page].tsx` (such as [page.tsx](mdc:app/page.tsx)) and the shared layout file ([layout.tsx](mdc:app/layout.tsx)) if present. This ensures that both page-specific and layout-wide styles are consistently applied.
