@@ -19,9 +19,9 @@ export default function Resume() {
       <h3 className="text-lg font-semibold mt-8 mb-2">Education</h3>
       <div className="mb-4">
         <div className="font-semibold">University of Virginia</div>
-        <div className="text-sm italic">Computer Science & Math, B.A. <span className="float-right">Aug 2024 — May 2026</span></div>
-        <div className="text-sm mb-1"><span className="font-semibold">Relevant coursework:</span> Data Structures & Algorithms, Artificial Intelligence and Machine Learning, Web and Mobile Development, Discrete Mathematics, Computer Organization/Systems and Assembly Language, Multivariable Calculus, Linear Algebra, Ordinary Differential Equations</div>
-        <div className="text-sm mb-1"><span className="font-semibold">Awards/Distinctions:</span> Dean's List, Big Idea Competition Finalist for GradSteps, National Merit Scholar</div>
+        <div className="text-sm italic">Computer Science &amp; Math, B.A. <span className="float-right">Aug 2024 — May 2026</span></div>
+        <div className="text-sm mb-1"><span className="font-semibold">Relevant coursework:</span> Data Structures &amp; Algorithms, Artificial Intelligence and Machine Learning, Web and Mobile Development, Discrete Mathematics, Computer Organization/Systems and Assembly Language, Multivariable Calculus, Linear Algebra, Ordinary Differential Equations</div>
+        <div className="text-sm mb-1"><span className="font-semibold">Awards/Distinctions:</span> Dean&apos;s List, Big Idea Competition Finalist for GradSteps, National Merit Scholar</div>
         <div className="font-semibold mt-2">Thomas Jefferson High School for Science and Technology</div>
         <div className="text-sm italic">Aug 2019 — June 2023</div>
       </div>
@@ -30,8 +30,8 @@ export default function Resume() {
       <div className="mb-4">
         <div className="font-semibold">Software Engineering Intern | Lineaje (startup), <span className="italic">San Francisco, CA</span> <span className="float-right">Summer 2023</span></div>
         <ul className="list-disc ml-6 text-sm mb-2">
-          <li>Spearheaded Lineaje's flagship <span className="italic">agentic LLM</span> product and showcased it to over 15,000 professionals at Black Hat USA 2023 in Las Vegas, NV</li>
-          <li>Developed tool using <span className="font-semibold">Langchain</span> and fine-tuned <span className="font-semibold">LLMs</span> to translate English queries to scan for critical vulnerabilities in a customer's Software Bill of Materials, increasing rates of enterprise customer compliance with White House's Executive Order 14028 by 4x</li>
+          <li>Spearheaded Lineaje&apos;s flagship <span className="italic">agentic LLM</span> product and showcased it to over 15,000 professionals at Black Hat USA 2023 in Las Vegas, NV</li>
+          <li>Developed tool using <span className="font-semibold">Langchain</span> and fine-tuned <span className="font-semibold">LLMs</span> to translate English queries to scan for critical vulnerabilities in a customer&apos;s Software Bill of Materials, increasing rates of enterprise customer compliance with White House&apos;s Executive Order 14028 by 4x</li>
         </ul>
         <div className="font-semibold">Intern | Cisco Systems, <span className="italic">Research Triangle, NC</span> <span className="float-right">Summer 2022</span></div>
         <ul className="list-disc ml-6 text-sm">
@@ -53,7 +53,7 @@ export default function Resume() {
         </ul>
         <div className="font-semibold">Electralert: Drowsy driving detection using temporal nodes of electroencephalography <span className="float-right">2022</span></div>
         <ul className="list-disc ml-6 text-sm">
-          <li>Designed a patent-pending system utilizing a <span className="font-semibold">Recurrent Neural Network (RNN)</span> to detect drowsiness by analyzing fluctuations in the EEG's theta wave signal relative to the user's baseline</li>
+          <li>Designed a patent-pending system utilizing a <span className="font-semibold">Recurrent Neural Network (RNN)</span> to detect drowsiness by analyzing fluctuations in the EEG&apos;s theta wave signal relative to the user&apos;s baseline</li>
         </ul>
       </div>
 
