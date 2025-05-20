@@ -1,8 +1,11 @@
+import Breadcrumbs from "./components/Breadcrumbs";
+
 
 export default async function Home() {
   return (
-    <section className="max-w-2xl mx-auto mt-20 px-4">
-      <header>
+    <section className="max-w-2xl mx-auto mt-10 px-4">
+      <Breadcrumbs />
+      <header className="mt-4">
         <h1 className="text-3xl font-extrabold mb-4">Tanmai Kalisipudi</h1>
       </header>
       <article className="space-y-4">
@@ -35,6 +38,8 @@ export default async function Home() {
           .
         </p>
       </article>
+      
+    
     </section>
   );
 }

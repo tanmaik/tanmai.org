@@ -1,6 +1,7 @@
 import { type Metadata } from 'next'
 import './globals.css'
-import Breadcrumbs from './components/Breadcrumbs';
+import { ClerkProvider } from '@clerk/nextjs'
+
 
 export const metadata: Metadata = {
   title: "Tanmai Kalisipudi",
@@ -14,8 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Breadcrumbs />
-        {children}
+        <ClerkProvider>
+          {children}
+        </ClerkProvider>
       </body>
     </html>
   )
