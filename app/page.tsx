@@ -35,7 +35,7 @@ export default async function Home() {
           <a href="/resume" className="text-blue-600 underline">
             resume
           </a>
-          . Currently, I&apos;m working on creating an <a href="/second-brain" className="text-blue-600 underline">AI-powered second brain</a> to help me manage my life. 
+          .
         </p>
       </article>
       
