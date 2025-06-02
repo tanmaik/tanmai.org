@@ -3,7 +3,7 @@ import Breadcrumbs from "./components/Breadcrumbs";
 
 export default async function Home() {
   return (
-    <section className="max-w-2xl mx-auto mt-10 px-4">
+    <section className="max-w-[42rem] mx-auto mt-10 px-4 mb-16">
       <Breadcrumbs />
       <header className="mt-4">
         <h1 className="text-3xl font-extrabold mb-4">Tanmai Kalisipudi</h1>
