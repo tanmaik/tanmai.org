@@ -27,4 +27,4 @@ export const config = {
   matcher: [
     '/journal/:path*',
   ],
-} 
+}
