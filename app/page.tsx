@@ -1,3 +1,5 @@
+import ResumeRequest from "./components/ResumeRequest";
+
 export default async function Home() {
   return (
     <div className="max-w-[650px] mx-auto my-12 px-2.5">
@@ -29,14 +31,12 @@ export default async function Home() {
         My interests include AI, startups, economics, and politics.
       </p>
       
-      
       <p className="mb-4">
-        For my full professional experience, see my{' '}
-        <a href="/resume" className="underline">
-          resume
-        </a>
+        For my full professional experience,{' '}
+        <ResumeRequest />
         .
       </p>
+      
     </div>
   );
 }
