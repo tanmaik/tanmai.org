@@ -1,7 +1,7 @@
 export default async function Home() {
   return (
     <div className="max-w-[650px] mx-auto my-12 px-2.5">
-      <h1 className="text-2xl font-normal mb-6">Tanmai Kalisipudi</h1>
+      <h1 className="text-2xl font-bold mt-16 mb-6">Tanmai Kalisipudi</h1>
       
       <p className="mb-4">
         I am a computer science &amp; math student at{' '}
