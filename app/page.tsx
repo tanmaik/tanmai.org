@@ -26,7 +26,12 @@ export default async function Home() {
       </p>
       
       <p className="mb-4">
-        I&apos;ve been programming since I was 5. My interests include AI, startups, economics, and politics. For my professional experience, see my{' '}
+        My interests include AI, startups, economics, and politics.
+      </p>
+      
+      
+      <p className="mb-4">
+        For my full professional experience, see my{' '}
         <a href="/resume" className="underline">
           resume
         </a>
