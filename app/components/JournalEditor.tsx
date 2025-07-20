@@ -13,8 +13,6 @@ export default function JournalEditor({ date, initialEntry }: JournalEditorProps
   const [blocks, setBlocks] = useState<JournalBlock[]>(initialEntry.blocks)
   const [autoLocation, setAutoLocation] = useState('')
   const [autoCoordinates, setAutoCoordinates] = useState('')
-  const [editingBlockId, setEditingBlockId] = useState<string | null>(null)
-  const [activeBlockId, setActiveBlockId] = useState<string | null>(null)
   const autoSaveTimeouts = useRef<Map<string, NodeJS.Timeout>>(new Map())
 
   // Auto-detect location on component mount
@@ -50,7 +48,7 @@ export default function JournalEditor({ date, initialEntry }: JournalEditorProps
         // If geocoding fails, just use coordinates
         setAutoLocation(coordinates)
       }
-    } catch (error) {
+    } catch {
       // Location detection failed - that's okay
     }
   }
@@ -60,7 +58,7 @@ export default function JournalEditor({ date, initialEntry }: JournalEditorProps
     textarea.style.height = textarea.scrollHeight + 'px'
   }
 
-  const createNewBlock = async (content: string = ''): Promise<string | null> => {
+  const createNewBlock = useCallback(async (content: string = ''): Promise<string | null> => {
     try {
       const result = await createJournalBlock(
         date,
@@ -74,11 +72,11 @@ export default function JournalEditor({ date, initialEntry }: JournalEditorProps
         setBlocks(prev => [...prev, result.block])
         return result.block.id
       }
-    } catch (error) {
-      console.error('Failed to create block:', error)
+    } catch {
+      console.error('Failed to create block')
     }
     return null
-  }
+  }, [date, autoLocation, autoCoordinates])
 
   const debouncedUpdate = useCallback((blockId: string, content: string) => {
     // Clear existing timeout for this block
@@ -92,8 +90,8 @@ export default function JournalEditor({ date, initialEntry }: JournalEditorProps
       try {
         await updateJournalBlockAction(date, blockId, content)
         autoSaveTimeouts.current.delete(blockId)
-      } catch (error) {
-        console.error('Failed to auto-save block:', error)
+      } catch {
+        console.error('Failed to auto-save block')
       }
     }, 500) // 500ms debounce
 
@@ -123,8 +121,8 @@ export default function JournalEditor({ date, initialEntry }: JournalEditorProps
         clearTimeout(timeout)
         autoSaveTimeouts.current.delete(blockId)
       }
-    } catch (error) {
-      console.error('Failed to delete block:', error)
+    } catch {
+      console.error('Failed to delete block')
     }
   }
 
@@ -193,7 +191,7 @@ export default function JournalEditor({ date, initialEntry }: JournalEditorProps
     if (blocks.length === 0) {
       createNewBlock()
     }
-  }, [blocks.length])
+  }, [blocks.length, createNewBlock])
 
   return (
     <div className="max-w-none">
@@ -206,7 +204,6 @@ export default function JournalEditor({ date, initialEntry }: JournalEditorProps
               onContentChange={(content) => handleBlockContentChange(block.id, content)}
               onKeyDown={(e) => handleKeyDown(e, block.id)}
               getRelativeTime={getRelativeTime}
-              isFirst={index === 0}
               autoResizeTextarea={autoResizeTextarea}
             />
           </div>
@@ -221,7 +218,6 @@ interface BlockComponentProps {
   onContentChange: (content: string) => void
   onKeyDown: (e: KeyboardEvent<HTMLTextAreaElement>) => void
   getRelativeTime: (timestamp: string) => string
-  isFirst: boolean
   autoResizeTextarea: (textarea: HTMLTextAreaElement) => void
 }
 
@@ -230,7 +226,6 @@ function BlockComponent({
   onContentChange,
   onKeyDown,
   getRelativeTime,
-  isFirst,
   autoResizeTextarea
 }: BlockComponentProps) {
   const textareaRef = useRef<HTMLTextAreaElement>(null)

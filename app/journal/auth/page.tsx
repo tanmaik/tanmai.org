@@ -28,7 +28,7 @@ export default function JournalAuth() {
       } else {
         setError('Invalid secret key')
       }
-    } catch (err) {
+    } catch {
       setError('Authentication failed')
     } finally {
       setLoading(false)

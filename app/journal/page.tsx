@@ -1,10 +1,9 @@
 import Link from 'next/link'
-import { getJournalDates, getJournalEntry, formatDateForDisplay, getTodayDate } from '../../lib/journal'
+import { getJournalDates, getJournalEntry, formatDateForDisplay } from '../../lib/journal'
 import Breadcrumbs from '../components/Breadcrumbs'
 
 export default async function JournalIndexPage() {
   const allDates = await getJournalDates()
-  const today = getTodayDate()
 
   // Get entry counts for each date
   const datesWithCounts = await Promise.all(

@@ -1,6 +1,5 @@
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { getJournalEntry, getJournalDates, getTodayDate, formatDateForDisplay } from '../../../lib/journal'
+import { getJournalEntry, formatDateForDisplay } from '../../../lib/journal'
 import JournalEditor from '../../components/JournalEditor'
 import Breadcrumbs from '../../components/Breadcrumbs'
 
@@ -17,7 +16,6 @@ export default async function JournalDatePage({ params }: Props) {
   }
 
   const entry = await getJournalEntry(date)
-  const today = getTodayDate()
 
   return (
     <section className="max-w-[42rem] mx-auto mt-8 px-4 mb-12">
