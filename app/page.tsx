@@ -5,7 +5,7 @@ export default async function Home() {
     <div className="max-w-[650px] mx-auto my-8 sm:my-12 px-4 sm:px-6">
       <h1 className="text-xl sm:text-2xl font-bold mt-8 sm:mt-16 mb-4 sm:mb-6">Tanmai Kalisipudi</h1>
       
-      <p className="mb-3 sm:mb-4 text-sm sm:text-base">
+      <p className="mb-3 sm:mb-4">
         I am a computer science &amp; math student at{' '}
         <a
           href="https://www.virginia.edu/"
@@ -27,11 +27,11 @@ export default async function Home() {
         .
       </p>
       
-      <p className="mb-3 sm:mb-4 text-sm sm:text-base">
+      <p className="mb-3 sm:mb-4">
         My interests include AI, startups, economics, and politics.
       </p>
       
-      <p className="mb-3 sm:mb-4 text-sm sm:text-base">
+      <p className="mb-3 sm:mb-4">
         For my full professional experience,{' '}
         <ResumeRequest />
         .
