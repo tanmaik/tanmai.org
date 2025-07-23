@@ -2,10 +2,10 @@ import ResumeRequest from "./components/ResumeRequest";
 
 export default async function Home() {
   return (
-    <div className="max-w-[650px] mx-auto my-12 px-2.5">
-      <h1 className="text-2xl font-bold mt-16 mb-6">Tanmai Kalisipudi</h1>
+    <div className="max-w-[650px] mx-auto my-8 sm:my-12 px-4 sm:px-6">
+      <h1 className="text-xl sm:text-2xl font-bold mt-8 sm:mt-16 mb-4 sm:mb-6">Tanmai Kalisipudi</h1>
       
-      <p className="mb-4">
+      <p className="mb-3 sm:mb-4 text-sm sm:text-base">
         I am a computer science &amp; math student at{' '}
         <a
           href="https://www.virginia.edu/"
@@ -27,11 +27,11 @@ export default async function Home() {
         .
       </p>
       
-      <p className="mb-4">
+      <p className="mb-3 sm:mb-4 text-sm sm:text-base">
         My interests include AI, startups, economics, and politics.
       </p>
       
-      <p className="mb-4">
+      <p className="mb-3 sm:mb-4 text-sm sm:text-base">
         For my full professional experience,{' '}
         <ResumeRequest />
         .
