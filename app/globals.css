@@ -1,12 +1,8 @@
 @import "tailwindcss";
 
 @layer base {
-  html {
-    font-family: Times, 'Times New Roman', serif;
-  }
-  
   body {
-    font-size: 1rem;
+    font-size: 0.875rem;
     line-height: 1.375;
   }
   
