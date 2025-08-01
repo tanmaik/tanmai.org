@@ -3,11 +3,8 @@
 import ResumeRequest from "./components/ResumeRequest";
 import { posts } from "./data/posts";
 import { useState } from "react";
-import dynamic from "next/dynamic";
 
-const componentMap: Record<string, any> = {
-  "hello-world": dynamic(() => import("./components/posts/HelloWorld")),
-};
+const componentMap: Record<string, any> = {};
 
 function getRelativeTime(date: Date): string {
   const now = new Date();
