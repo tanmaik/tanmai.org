@@ -1,16 +1,1 @@
 @import "tailwindcss";
-
-@layer base {
-  body {
-    font-size: 0.875rem;
-    line-height: 1.375;
-  }
-  
-  a {
-    color: #0000ee;
-  }
-  
-  a:visited {
-    color: #551a8b;
-  }
-}
