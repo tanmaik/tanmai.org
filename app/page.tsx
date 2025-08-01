@@ -11,7 +11,7 @@ export default async function Home() {
           href="https://www.virginia.edu/"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline text-[#0000ee] visited:text-[#551a8b]"
+          className="underline [color:#0000ee] visited:[color:#551a8b]"
         >
           The University of Virginia
         </a>
@@ -20,7 +20,7 @@ export default async function Home() {
           href="https://tjhsst.fcps.edu/"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline text-[#0000ee] visited:text-[#551a8b]"
+          className="underline [color:#0000ee] visited:[color:#551a8b]"
         >
           TJHSST
         </a>
