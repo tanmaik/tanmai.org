@@ -1,13 +1,6 @@
-"use client";
-
 import ResumeRequest from "./components/ResumeRequest";
 import { posts } from "./data/posts";
-import { useState } from "react";
-import dynamic from "next/dynamic";
-
-const componentMap: Record<string, React.ComponentType> = {
-  "hello-world": dynamic(() => import("./components/posts/HelloWorld")),
-};
+import Link from "next/link";
 
 function getRelativeTime(date: Date): string {
   const now = new Date();
@@ -24,7 +17,7 @@ function getRelativeTime(date: Date): string {
 
 export default function Home() {
   const sortedPosts = [...posts].sort((a, b) => b.date.getTime() - a.date.getTime());
-  const [expandedPost, setExpandedPost] = useState<string | null>(null);
+  
   return (
     <div className="w-full sm:max-w-lg p-2 space-y-2 text-sm leading-[1.375]">
       <h1 className="text-xl sm:text-2xl font-bold">Tanmai Kalisipudi</h1>
@@ -61,28 +54,16 @@ export default function Home() {
 
       <div className="mt-4 space-y-2">
         <h2 className="text-lg font-bold">Writing</h2>
-        {sortedPosts.map((post) => {
-          const PostContent = componentMap[post.slug];
-          const isExpanded = expandedPost === post.id;
-          
-          return (
-            <div key={post.id}>
-              <p>
-                <button
-                  onClick={() => setExpandedPost(isExpanded ? null : post.id)}
-                  className="underline [color:#0000ee] visited:[color:#551a8b] text-left cursor-pointer"
-                >
-                  {post.title} ({getRelativeTime(post.date)}) {isExpanded ? "↑" : "↓"}
-                </button>
-              </p>
-              {isExpanded && PostContent && (
-                <div className="ml-4 mt-2">
-                  <PostContent />
-                </div>
-              )}
-            </div>
-          );
-        })}
+        {sortedPosts.map((post) => (
+          <p key={post.id}>
+            <Link
+              href={`/writing/${post.slug}`}
+              className="underline [color:#0000ee] visited:[color:#551a8b]"
+            >
+              {post.title} ({getRelativeTime(post.date)})
+            </Link>
+          </p>
+        ))}
       </div>
     </div>
   );
