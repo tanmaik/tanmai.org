@@ -17,7 +17,7 @@ export default function Home() {
           rel="noopener noreferrer"
           className="underline [color:#0000ee] visited:[color:#551a8b]"
         >
-          UVA'27
+          UVA&apos;27
         </a>
         ,{" "}
         <a
@@ -26,7 +26,7 @@ export default function Home() {
           rel="noopener noreferrer"
           className="underline [color:#0000ee] visited:[color:#551a8b]"
         >
-          TJHSST'23
+          TJHSST&apos;23
         </a>
         .
       </p>

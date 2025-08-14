@@ -20,8 +20,9 @@ function getRelativeTime(date: Date): string {
   return `${Math.floor(diffDays / 365)} year${Math.floor(diffDays / 365) > 1 ? 's' : ''} ago`;
 }
 
-export default function WritingPage({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug);
+export default async function WritingPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   
   if (!post) {
     notFound();
