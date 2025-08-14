@@ -34,15 +34,15 @@ export default function WritingPage({ params }: { params: { slug: string } }) {
   }
   
   return (
-    <div className="w-full sm:max-w-lg p-2 space-y-2 text-sm leading-[1.375]">
+    <div className="w-full sm:max-w-lg p-3 space-y-2 text-sm leading-relaxed">
       <Link href="/" className="underline [color:#0000ee] visited:[color:#551a8b]">
         ← Back
       </Link>
       
-      <h1 className="text-xl sm:text-2xl font-bold mt-4">{post.title}</h1>
+      <h1 className="text-xl sm:text-2xl font-bold mt-3">{post.title}</h1>
       <p className="text-gray-600">{getRelativeTime(post.date)}</p>
       
-      <div className="mt-4">
+      <div className="mt-3">
         <PostContent />
       </div>
     </div>
