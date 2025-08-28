@@ -3,8 +3,10 @@ import { posts } from "./data/posts";
 import Link from "next/link";
 
 export default function Home() {
-  const sortedPosts = [...posts].sort((a, b) => b.date.getTime() - a.date.getTime());
-  
+  const sortedPosts = [...posts].sort(
+    (a, b) => b.date.getTime() - a.date.getTime()
+  );
+
   return (
     <div className="w-full sm:max-w-lg p-3 space-y-2 text-sm leading-relaxed">
       <h1 className="text-xl sm:text-2xl font-bold">Tanmai Kalisipudi</h1>
