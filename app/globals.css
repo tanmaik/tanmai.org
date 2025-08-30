@@ -1,11 +1,94 @@
 @import "tailwindcss";
 
-@layer base {
-  body {
-    font-family: var(--font-iowa-old-style), serif;
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-perfectly-nineties), sans-serif;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 14px;
+    line-height: 1.714;
+    /* font-weight: 500; */
+    letter-spacing: normal;
+    font-feature-settings: "calt", "ccmp", "locl", "kern";
+    font-variation-settings: "opsz" 14, "wght" 500;
+    font-variant: normal;
+    color: oklch(0.22213 0 0);
+  }
+
+  body {
+    font-size: 14px;
+    line-height: 1.714;
+    /* font-weight: 400; */
+    letter-spacing: normal;
+    font-feature-settings: "calt", "ccmp", "locl", "kern";
+    font-variation-settings: "opsz" 14, "wght" 400;
+    font-variant: normal;
+    color: oklch(0.47421 0 0);
+  }
+
+  p,
+  div,
+  span {
+    font-size: 14px;
+    line-height: 1.714;
+    /* font-weight: 400; */
+    letter-spacing: normal;
+    font-feature-settings: "calt", "ccmp", "locl", "kern";
+    font-variation-settings: "opsz" 14, "wght" 400;
+    font-variant: normal;
+    color: oklch(0.47421 0 0);
+  }
+
+  article p {
+    color: oklch(0.30557 0 0);
+    font-variation-settings: "opsz" 14, "wght" 450;
+  }
+
+  a {
+    font-size: 14px;
+    line-height: 1.714;
+    /* font-weight: 400; */
+    letter-spacing: normal;
+    font-feature-settings: "calt", "ccmp", "locl", "kern";
+    font-variation-settings: "opsz" 14, "wght" 400;
+    font-variant: normal;
+    color: oklch(0.65 0 0);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: oklch(0.35 0 0);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .no-underline {
+    text-decoration: none !important;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
