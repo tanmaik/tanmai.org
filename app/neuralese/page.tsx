@@ -17,14 +17,16 @@ export default function BitterLessonPage() {
             <div className="space-y-0">
               <div className="flex items-center gap-2">
                 <h1 className="font-medium text-black/85">Neuralese</h1>
-                <span className="text-xs text-black/30 bg-black/5 px-2 py-0.5 rounded">DRAFT</span>
+                <span className="text-xs text-black/30 bg-black/5 px-2 py-0.5 rounded">
+                  DRAFT
+                </span>
               </div>
               <p className="font-normal text-black/30">00/00</p>
             </div>
           </div>
 
           <ViewTransition update="none">
-            <article className="space-y-6 font-normal">
+            <article className="space-y-4 font-normal">
               <p>
                 Language models have taught us something profound about
                 intelligence and learning. The bitter lesson, as Rich Sutton
