@@ -1,5 +1,4 @@
 import ResumeRequest from "./components/ResumeRequest";
-import Link from "next/link";
 import { unstable_ViewTransition as ViewTransition } from "react";
 
 export default function Home() {
