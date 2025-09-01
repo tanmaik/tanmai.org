@@ -17,9 +17,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </head>
       <body>
-        <div className="animate-fade-in">
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   );
