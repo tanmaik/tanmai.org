@@ -28,15 +28,16 @@ export default function Home() {
             <hr className="border-gray-200" />
 
             <div className="space-y-3">
-              <Link href="/neuralese" className="block no-underline ">
-                <div className="flex justify-between items-center p-2 -mx-2 rounded hover:bg-gray-50 transition-colors cursor-pointer">
-                  <h3 className="font-medium text-black/85">Neuralese</h3>
-                  <div className="flex items-center gap-4 text-xs opacity-50">
-                    <span className="text-xs text-black/30">AI</span>
-                    <span className="text-xs text-black/30">00/00</span>
-                  </div>
+              <div className="flex justify-between items-center p-2 -mx-2 rounded opacity-50 cursor-not-allowed">
+                <div className="flex items-center gap-2">
+                  <h3 className="font-medium text-black/40">Neuralese</h3>
+                  <span className="text-xs text-black/20 bg-black/5 px-2 py-0.5 rounded">DRAFT</span>
                 </div>
-              </Link>
+                <div className="flex items-center gap-4 text-xs">
+                  <span className="text-xs text-black/20">AI</span>
+                  <span className="text-xs text-black/20">00/00</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
