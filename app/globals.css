@@ -1,16 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  font-family: Inter, sans-serif;
-  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
-}
-
-@supports (font-variation-settings: normal) {
-  :root {
-    font-family: InterVariable, sans-serif;
-  }
-}
-
 @layer base {
   h1,
   h2,
@@ -33,9 +22,7 @@
     line-height: 1.714;
     /* font-weight: 400; */
     letter-spacing: normal;
-    font-feature-settings: "calt", "ccmp", "locl", "kern";
-    font-variation-settings: "opsz" 14, "wght" 400;
-    font-variant: normal;
+
     color: oklch(0.47421 0 0);
   }
 
@@ -94,12 +81,20 @@
   }
 
   @keyframes fade-out {
-    from { opacity: 1; }
-    to { opacity: 0; }
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
   }
 
   @keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }

@@ -28,9 +28,7 @@ export default function Home() {
             <div className="space-y-3">
               <Link href="/neuralese" className="block no-underline">
                 <div className="flex justify-between items-center p-2 -mx-2 rounded hover:bg-gray-50 transition-colors cursor-pointer">
-                  <ViewTransition name="neuralese-title">
-                    <h3>Neuralese</h3>
-                  </ViewTransition>
+                  <h3>Neuralese</h3>
                   <div className="flex items-center gap-4 text-xs opacity-50">
                     <span>AI</span>
                     <span>00/00</span>

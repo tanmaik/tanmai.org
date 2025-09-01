@@ -12,9 +12,7 @@ export default function BitterLessonPage() {
             </Link>
             
             <div className="space-y-0">
-              <ViewTransition name="neuralese-title">
-                <h1>Neuralese</h1>
-              </ViewTransition>
+              <h1>Neuralese</h1>
               <p className="opacity-70">00/00</p>
             </div>
           </div>
