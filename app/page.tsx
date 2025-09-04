@@ -13,7 +13,7 @@ export default function Home() {
 
             <p className="font-normal text-black/70">
               I&apos;m currently a third year studying CS and Math @ UVA.
-              Previously, I've worked at{" "}
+              Previously, I&apos;ve worked at{" "}
               <a
                 href="https://cisco.com"
                 target="_blank"
