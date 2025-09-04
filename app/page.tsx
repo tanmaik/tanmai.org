@@ -1,4 +1,3 @@
-import ResumeRequest from "./components/ResumeRequest";
 import { unstable_ViewTransition as ViewTransition } from "react";
 
 export default function Home() {
@@ -11,13 +10,78 @@ export default function Home() {
               <h1 className="font-medium text-black/85">Tanmai Kalisipudi</h1>
             </ViewTransition>
 
-            <p className="font-normal text-black/50 ">
-              CS &amp; Math at UVA&apos;27, TJHSST&apos;23.
+            <p className="font-normal text-black/70">
+              I&apos;m currently a third year studying CS and Math @ UVA.
+              Previously, I worked at{" "}
+              <a
+                href="https://cisco.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black/50 underline transition-colors hover:text-black/80"
+              >
+                Cisco
+              </a>
+              ,{" "}
+              <a
+                href="https://lineaje.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black/50 underline transition-colors hover:text-black/80"
+              >
+                Lineaje
+              </a>
+              , and{" "}
+              <a
+                href="https://suitable.co"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black/50 underline transition-colors hover:text-black/80"
+              >
+                Suitable
+              </a>
+              , solo-founded{" "}
+              <a
+                href="https://gradsteps.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black/50 underline transition-colors hover:text-black/80"
+              >
+                GradSteps
+              </a>
+              , and graduated from TJHSST.
+            </p>
+            
+            <p className="font-normal text-black/70">
+              I&apos;m particularly interested in artificial intelligence, startups,
+              economics, and politics.
             </p>
 
-            <p className="font-normal text-black/50">
-              Interested in AI, startups, economics, and politics.{" "}
-              <ResumeRequest />.
+            <p className="font-normal text-black/70">
+              <a
+                href="mailto:tanmai.kalisipudi@gmail.com?subject=Resume Request&body=Hi Tanmai,%0D%0A%0D%0AI would like to request a copy of your resume.%0D%0A%0D%0AThank you!"
+                className="text-black/50 underline transition-colors hover:text-black/80"
+              >
+                Email me
+              </a>{" "}
+              to get my resume or view my{" "}
+              <a
+                href="https://github.com/tanmaik"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black/50 underline transition-colors hover:text-black/80"
+              >
+                Github
+              </a>{" "}
+              or{" "}
+              <a
+                href="https://linkedin.com/in/tanmaikalisipudi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black/50 underline transition-colors hover:text-black/80"
+              >
+                Linkedin
+              </a>
+              .
             </p>
           </div>
 
@@ -30,7 +94,9 @@ export default function Home() {
               <div className="flex justify-between items-center p-2 -mx-2 rounded opacity-50 cursor-not-allowed">
                 <div className="flex items-center gap-2">
                   <h3 className="font-medium text-black/40">Neuralese</h3>
-                  <span className="text-xs text-black/20 bg-black/5 px-2 py-0.5 rounded">DRAFT</span>
+                  <span className="text-xs text-black/20 bg-black/5 px-2 py-0.5 rounded">
+                    DRAFT
+                  </span>
                 </div>
                 <div className="flex items-center gap-4 text-xs">
                   <span className="text-xs text-black/20">AI</span>
