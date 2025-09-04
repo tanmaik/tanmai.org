@@ -39,7 +39,7 @@ export default function Home() {
               >
                 Suitable
               </a>
-              , solo-founded{" "}
+              , founded{" "}
               <a
                 href="https://gradsteps.com"
                 target="_blank"
@@ -50,10 +50,10 @@ export default function Home() {
               </a>
               , and graduated from TJHSST.
             </p>
-            
+
             <p className="font-normal text-black/70">
-              I&apos;m particularly interested in artificial intelligence, startups,
-              economics, and politics.
+              I&apos;m particularly interested in artificial intelligence,
+              startups, economics, and politics.
             </p>
 
             <p className="font-normal text-black/70">
