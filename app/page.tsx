@@ -1,9 +1,10 @@
 import { unstable_ViewTransition as ViewTransition } from "react";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <ViewTransition>
-      <div className="flex justify-center p-4 pt-16">
+      <div className="flex justify-center p-4 pt-16 animate-fade-in">
         <div className="w-full max-w-lg space-y-8">
           <div className="space-y-2">
             <ViewTransition name="page-title">
@@ -12,7 +13,7 @@ export default function Home() {
 
             <p className="font-normal text-black/70">
               I&apos;m currently a third year studying CS and Math @ UVA.
-              Previously, I worked at{" "}
+              Previously, I've worked at{" "}
               <a
                 href="https://cisco.com"
                 target="_blank"
@@ -91,18 +92,16 @@ export default function Home() {
             <hr className="border-gray-200" />
 
             <div className="space-y-3">
-              <div className="flex justify-between items-center p-2 -mx-2 rounded opacity-50 cursor-not-allowed">
-                <div className="flex items-center gap-2">
-                  <h3 className="font-medium text-black/40">Neuralese</h3>
-                  <span className="text-xs text-black/20 bg-black/5 px-2 py-0.5 rounded">
-                    DRAFT
-                  </span>
-                </div>
+              <Link
+                href="/neuralese"
+                className="flex justify-between items-center p-2 -mx-2 rounded hover:bg-black/5 transition-colors"
+              >
+                <h3 className="font-medium text-black/85">Neuralese</h3>
                 <div className="flex items-center gap-4 text-xs">
-                  <span className="text-xs text-black/20">AI</span>
-                  <span className="text-xs text-black/20">00/00</span>
+                  <span className="text-xs text-black/50">AI</span>
+                  <span className="text-xs text-black/50">01/04/25</span>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>

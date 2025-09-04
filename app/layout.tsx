@@ -12,7 +12,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="text-sm leading-relaxed">{children}</body>
+      <body className="text-sm leading-relaxed pb-16">{children}</body>
     </html>
   );
 }
