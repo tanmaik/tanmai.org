@@ -22,7 +22,7 @@ export default function NovaBrainDrainPage() {
             <div className="space-y-0">
               <div className="flex items-center gap-2">
                 <h1 className="font-medium text-black/85 dark:text-white/95">
-                  Northern Virginia's Brain Drain Problem
+                  Northern Virginia&apos;s Brain Drain Problem
                 </h1>
                 <span className="text-xs bg-black/10 dark:bg-white/10 text-black/60 dark:text-white/60 px-1.5 py-0.5 rounded">
                   DRAFT

@@ -108,7 +108,7 @@ export default function Home() {
               <div className="flex justify-between items-center py-1 px-2 -mx-2 rounded opacity-60 cursor-default">
                 <div className="flex items-center gap-2">
                   <h3 className="font-medium text-black/85 dark:text-white/95">
-                    Northern Virginia's Brain Drain Problem
+                    Northern Virginia&apos;s Brain Drain Problem
                   </h3>
                   <span className="text-xs bg-black/10 dark:bg-white/10 text-black/60 dark:text-white/60 px-1.5 py-0.5 rounded">
                     DRAFT
