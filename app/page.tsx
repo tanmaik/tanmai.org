@@ -97,17 +97,17 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="space-y-4 mt-10">
+          <div className="space-y-3 mt-10">
             <h2 className="font-medium text-black/85 dark:text-white/95">
               Library
             </h2>
 
             <hr className="border-black/10 dark:border-white/10" />
 
-            <div className="space-y-3">
+            <div className="space-y-1">
               <Link
                 href="/deadcollegetheory"
-                className="flex justify-between items-center p-2 -mx-2 rounded hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+                className="flex justify-between items-center py-1 px-2 -mx-2 rounded hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
               >
                 <h3 className="font-medium text-black/85 dark:text-white/95">
                   Dead College Theory
@@ -124,7 +124,7 @@ export default function Home() {
 
               <Link
                 href="/neuralese"
-                className="flex justify-between items-center p-2 -mx-2 rounded hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+                className="flex justify-between items-center py-1 px-2 -mx-2 rounded hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
               >
                 <h3 className="font-medium text-black/85 dark:text-white/95">
                   Neuralese
