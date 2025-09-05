@@ -64,23 +64,32 @@ export default function Home() {
               >
                 Email me
               </a>{" "}
-              to get my resume or view my{" "}
+              for my resume or find me on{" "}
               <a
                 href="https://github.com/tanmaik"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black/50 underline transition-colors hover:text-black/80"
               >
-                Github
-              </a>{" "}
-              or{" "}
+                GitHub
+              </a>
+              ,{" "}
               <a
                 href="https://linkedin.com/in/tanmaikalisipudi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black/50 underline transition-colors hover:text-black/80"
               >
-                Linkedin
+                LinkedIn
+              </a>
+              , and{" "}
+              <a
+                href="https://huggingface.co/tanmaik"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black/50 underline transition-colors hover:text-black/80"
+              >
+                HuggingFace
               </a>
               .
             </p>
