@@ -1,7 +1,12 @@
 import Link from "next/link";
 import { unstable_ViewTransition as ViewTransition } from "react";
+import { type Metadata } from "next";
 
-export default function RIPCollegePage() {
+export const metadata: Metadata = {
+  title: "Dead College Theory",
+};
+
+export default function DeadCollegeTheoryPage() {
   return (
     <ViewTransition>
       <div className="flex justify-center p-4 pt-8 sm:pt-16 animate-fade-in">
@@ -16,7 +21,7 @@ export default function RIPCollegePage() {
 
             <div className="space-y-0">
               <h1 className="font-medium text-black/85 dark:text-white/95">
-                Hollow College
+                Dead College Theory
               </h1>
               <p className="font-normal text-black/50 dark:text-white/65">
                 01/04/25
