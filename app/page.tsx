@@ -106,6 +106,23 @@ export default function Home() {
 
             <div className="space-y-1">
               <Link
+                href="/novabd"
+                className="flex justify-between items-center py-1 px-2 -mx-2 rounded hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+              >
+                <h3 className="font-medium text-black/85 dark:text-white/95">
+                  Northern Virginia's Brain Drain Problem
+                </h3>
+                <div className="flex items-center gap-4 text-xs">
+                  <span className="text-xs text-black/50 dark:text-white/65">
+                    Politics
+                  </span>
+                  <span className="text-xs text-black/50 dark:text-white/65">
+                    01/04/25
+                  </span>
+                </div>
+              </Link>
+              
+              <Link
                 href="/deadcollegetheory"
                 className="flex justify-between items-center py-1 px-2 -mx-2 rounded hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
               >
@@ -121,7 +138,7 @@ export default function Home() {
                   </span>
                 </div>
               </Link>
-
+              
               <Link
                 href="/neuralese"
                 className="flex justify-between items-center py-1 px-2 -mx-2 rounded hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
