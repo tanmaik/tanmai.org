@@ -14,7 +14,7 @@ export default function Home() {
             </ViewTransition>
 
             <p className="font-normal text-black/70 dark:text-white/85">
-              I&apos;m currently a third year studying CS and Math @ UVA.
+              I&apos;m currently in my third year studying CS and Math @ UVA.
               Previously, I&apos;ve worked at{" "}
               <a
                 href="https://cisco.com"
