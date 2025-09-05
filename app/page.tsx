@@ -106,6 +106,23 @@ export default function Home() {
 
             <div className="space-y-3">
               <Link
+                href="/deadcollegetheory"
+                className="flex justify-between items-center p-2 -mx-2 rounded hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+              >
+                <h3 className="font-medium text-black/85 dark:text-white/95">
+                  Dead College Theory
+                </h3>
+                <div className="flex items-center gap-4 text-xs">
+                  <span className="text-xs text-black/50 dark:text-white/65">
+                    Education
+                  </span>
+                  <span className="text-xs text-black/50 dark:text-white/65">
+                    01/04/25
+                  </span>
+                </div>
+              </Link>
+
+              <Link
                 href="/neuralese"
                 className="flex justify-between items-center p-2 -mx-2 rounded hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
               >
