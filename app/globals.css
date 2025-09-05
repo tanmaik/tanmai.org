@@ -12,3 +12,10 @@
 .animate-fade-in {
   animation: fade-in 0.2s ease-out forwards;
 }
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
