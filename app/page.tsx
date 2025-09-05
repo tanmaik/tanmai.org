@@ -105,40 +105,44 @@ export default function Home() {
             <hr className="border-black/10 dark:border-white/10" />
 
             <div className="space-y-1">
-              <Link
-                href="/novabd"
-                className="flex justify-between items-center py-1 px-2 -mx-2 rounded hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
-              >
-                <h3 className="font-medium text-black/85 dark:text-white/95">
-                  Northern Virginia's Brain Drain Problem
-                </h3>
+              <div className="flex justify-between items-center py-1 px-2 -mx-2 rounded opacity-60 cursor-default">
+                <div className="flex items-center gap-2">
+                  <h3 className="font-medium text-black/85 dark:text-white/95">
+                    Northern Virginia's Brain Drain Problem
+                  </h3>
+                  <span className="text-xs bg-black/10 dark:bg-white/10 text-black/60 dark:text-white/60 px-1.5 py-0.5 rounded">
+                    DRAFT
+                  </span>
+                </div>
                 <div className="flex items-center gap-4 text-xs">
                   <span className="text-xs text-black/50 dark:text-white/65">
                     Politics
                   </span>
                   <span className="text-xs text-black/50 dark:text-white/65">
-                    01/04/25
+                    00/00
                   </span>
                 </div>
-              </Link>
-              
-              <Link
-                href="/deadcollegetheory"
-                className="flex justify-between items-center py-1 px-2 -mx-2 rounded hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
-              >
-                <h3 className="font-medium text-black/85 dark:text-white/95">
-                  Dead College Theory
-                </h3>
+              </div>
+
+              <div className="flex justify-between items-center py-1 px-2 -mx-2 rounded opacity-60 cursor-default">
+                <div className="flex items-center gap-2">
+                  <h3 className="font-medium text-black/85 dark:text-white/95">
+                    Dead College Theory
+                  </h3>
+                  <span className="text-xs bg-black/10 dark:bg-white/10 text-black/60 dark:text-white/60 px-1.5 py-0.5 rounded">
+                    DRAFT
+                  </span>
+                </div>
                 <div className="flex items-center gap-4 text-xs">
                   <span className="text-xs text-black/50 dark:text-white/65">
                     Education
                   </span>
                   <span className="text-xs text-black/50 dark:text-white/65">
-                    01/04/25
+                    00/00
                   </span>
                 </div>
-              </Link>
-              
+              </div>
+
               <Link
                 href="/neuralese"
                 className="flex justify-between items-center py-1 px-2 -mx-2 rounded hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
@@ -151,7 +155,7 @@ export default function Home() {
                     AI
                   </span>
                   <span className="text-xs text-black/50 dark:text-white/65">
-                    01/04/25
+                    00/00
                   </span>
                 </div>
               </Link>

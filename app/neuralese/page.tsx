@@ -24,7 +24,7 @@ export default function NeuralePage() {
                 Neuralese
               </h1>
               <p className="font-normal text-black/50 dark:text-white/65">
-                01/04/25
+                00/00
               </p>
             </div>
           </div>
