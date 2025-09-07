@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function NeuralePage() {
   return (
     <ViewTransition>
-      <div className="flex justify-center p-4 pt-8 sm:pt-16 animate-fade-in">
+      <div className="flex justify-center p-4 pt-8 sm:pt-16">
         <div className="w-full max-w-lg space-y-6">
           <div className="space-y-8">
             <Link
