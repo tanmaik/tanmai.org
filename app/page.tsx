@@ -49,7 +49,8 @@ export default function Home() {
           </p>
 
           <p>
-            Interests include artificial intelligence, startups, economics, and politics. I&apos;ve started 85 businesses and have failed at 83.
+            My interests include artificial intelligence, startups, economics,
+            and politics. I&apos;ve started 85 businesses and have failed at 83.
           </p>
 
           <p>
