@@ -1,5 +1,4 @@
 import { unstable_ViewTransition as ViewTransition } from "react";
-import Link from "next/link";
 
 export default function Home() {
   return (
