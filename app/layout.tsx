@@ -1,6 +1,5 @@
 import { type Metadata } from "next";
 import "./globals.css";
-import PageTransition from "@/components/PageTransition";
 
 export const metadata: Metadata = {
   title: "Tanmai Kalisipudi",
@@ -31,7 +30,7 @@ export default function RootLayout({
         <meta name="msapplication-navbutton-color" content="#000000" />
       </head>
       <body>
-        <PageTransition>{children}</PageTransition>
+        {children}
       </body>
     </html>
   );
