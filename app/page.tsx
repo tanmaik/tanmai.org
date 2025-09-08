@@ -5,7 +5,7 @@ export default function Home() {
     <main>
       <div className="maincontent">
         <div className="mb-6">
-          <h2>
+          <h2 className="text-lg">
             <strong>Tanmai Kalisipudi</strong>
           </h2>
         </div>
@@ -49,8 +49,7 @@ export default function Home() {
           </p>
 
           <p>
-            I&apos;m particularly interested in artificial intelligence,
-            startups, economics, and politics.
+            Interests include artificial intelligence, startups, economics, and politics. I&apos;ve started 85 businesses and have failed at 83.
           </p>
 
           <p>
