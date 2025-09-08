@@ -9,22 +9,19 @@ export const metadata: Metadata = {
 export default function DeadCollegeTheoryPage() {
   return (
     <ViewTransition>
-      <div className="container">
-        <div className="space-y">
-          <Link href="/">Home</Link>
+      <main>
+        <div className="maincontent">
+          <h1>Dead College Theory</h1>
+          <p>Tanmai Kalisipudi<br />
+          00/00</p>
 
-          <div>
-            <h1>Dead College Theory</h1>
-            <p className="text-muted small-text">00/00</p>
-          </div>
+          <ViewTransition update="none">
+            <p>This page is under construction.</p>
+          </ViewTransition>
+
+          <p><Link href="/">← Back</Link></p>
         </div>
-
-        <ViewTransition update="none">
-          <article>
-            This page is under construction.
-          </article>
-        </ViewTransition>
-      </div>
+      </main>
     </ViewTransition>
   );
 }

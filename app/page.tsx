@@ -4,10 +4,10 @@ import Link from "next/link";
 export default function Home() {
   return (
     <ViewTransition>
-      <div className="container">
-        <div className="space-y">
+      <main>
+        <div className="maincontent">
           <ViewTransition name="page-title">
-            <h1>Tanmai Kalisipudi</h1>
+            <h2><strong>Tanmai Kalisipudi</strong></h2>
           </ViewTransition>
 
           <p>
@@ -84,39 +84,15 @@ export default function Home() {
             </a>
             .
           </p>
+
+          <h3><strong>Essays</strong></h3>
+          <ul>
+            <li><Link href="/neuralese"><em>Neuralese</em></Link></li>
+            <li><em>Northern Virginia&apos;s Brain Drain Problem</em> (Draft)</li>
+            <li><em>Dead College Theory</em> (Draft)</li>
+          </ul>
         </div>
-
-        <div className="space-y">
-          <h2>Library</h2>
-
-          <div className="library-item">
-            <h3>
-              Northern Virginia&apos;s Brain Drain Problem
-              <span className="draft-badge">DRAFT</span>
-            </h3>
-            <div className="library-meta">
-              <span>Politics</span> • <span>00/00</span>
-            </div>
-          </div>
-
-          <div className="library-item">
-            <h3>
-              Dead College Theory
-              <span className="draft-badge">DRAFT</span>
-            </h3>
-            <div className="library-meta">
-              <span>Education</span> • <span>00/00</span>
-            </div>
-          </div>
-
-          <Link href="/neuralese" className="library-item">
-            <h3>Neuralese</h3>
-            <div className="library-meta">
-              <span>AI</span> • <span>00/00</span>
-            </div>
-          </Link>
-        </div>
-      </div>
+      </main>
     </ViewTransition>
   );
 }
