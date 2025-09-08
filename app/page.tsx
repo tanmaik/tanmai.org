@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <div className="mb-4">
-        <h2 className="text-3xl font-bold">Tanmai Kalisipudi</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold">Tanmai Kalisipudi</h2>
       </div>
 
       <div className="mb-4 space-y-4">
@@ -46,7 +46,7 @@ export default function Home() {
       {/* 
       <div className="mb-4">
         <h3 className="mb-3 text-2xl font-bold">Writings</h3>
-        <ul className="list-disc ml-6">
+        <ul className="list-disc ml-6 italic">
           <li>
             <Link href="/neuralese">Neuralese</Link>
           </li>
