@@ -9,32 +9,21 @@ export const metadata: Metadata = {
 export default function NeuralePage() {
   return (
     <ViewTransition>
-      <div className="flex justify-center p-4 pt-8 sm:pt-16">
-        <div className="w-full max-w-lg space-y-6">
-          <div className="space-y-8">
-            <Link
-              href="/"
-              className="inline-block no-underline text-black/65 dark:text-white/65 hover:text-black/80 dark:hover:text-white/80"
-            >
-              Home
-            </Link>
+      <div className="container">
+        <div className="space-y">
+          <Link href="/">Home</Link>
 
-            <div className="space-y-0">
-              <h1 className="font-medium text-black/85 dark:text-white/95">
-                Neuralese
-              </h1>
-              <p className="font-normal text-black/50 dark:text-white/65">
-                00/00
-              </p>
-            </div>
+          <div>
+            <h1>Neuralese</h1>
+            <p className="text-muted small-text">00/00</p>
           </div>
-
-          <ViewTransition update="none">
-            <article className="space-y-4 font-normal text-black/70 dark:text-white/85">
-              This page is under construction.
-            </article>
-          </ViewTransition>
         </div>
+
+        <ViewTransition update="none">
+          <article>
+            This page is under construction.
+          </article>
+        </ViewTransition>
       </div>
     </ViewTransition>
   );
