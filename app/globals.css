@@ -1,22 +1,8 @@
 @import "tailwindcss";
 
-/* Mechanize.work-style body */
+/* Font family */
 body {
   font-family: "Times New Roman", Times, serif;
-  line-height: 1.4;
-  font-size: 16px;
-  padding: 0 10px;
-  margin: 50px auto;
-  max-width: 650px;
-  color: black;
-  background-color: white;
-}
-
-/* Main content container like mechanize.work */
-.maincontent {
-  max-width: 42em;
-  margin: 15px auto;
-  margin-top: 70px;
 }
 
 /* Links - classic web colors */
@@ -27,18 +13,4 @@ a {
 
 a:visited {
   color: #551a8b;
-}
-
-/* Remove all animations and transitions */
-*, *::before, *::after {
-  transition: none !important;
-  animation: none !important;
-}
-
-/* Image styling like mechanize.work */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
 }

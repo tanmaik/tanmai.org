@@ -12,25 +12,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <meta
-          name="theme-color"
-          content="#ffffff"
-          media="(prefers-color-scheme: light)"
-        />
-        <meta
-          name="theme-color"
-          content="#000000"
-          media="(prefers-color-scheme: dark)"
-        />
-        <meta
-          name="apple-mobile-web-app-status-bar-style"
-          content="black-translucent"
-        />
-        <meta name="msapplication-navbutton-color" content="#000000" />
-      </head>
-      <body>
-        {children}
+      <body className="leading-[1.4] text-base px-2.5 my-12 mx-auto max-w-2xl text-black bg-white">
+        <div className="max-w-xl mx-auto my-4 mt-[70px]">{children}</div>
       </body>
     </html>
   );
