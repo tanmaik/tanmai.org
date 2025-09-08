@@ -14,7 +14,11 @@ export default function Home() {
           <p>
             I&apos;m currently in my third year studying CS and Math @ UVA.
             Previously, I&apos;ve worked at{" "}
-            <a href="https://cisco.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://cisco.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Cisco
             </a>
             ,{" "}
@@ -27,7 +31,7 @@ export default function Home() {
             </a>
             , and{" "}
             <a
-              href="https://suitable.co"
+              href="https://www.suitable.co"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -45,8 +49,8 @@ export default function Home() {
           </p>
 
           <p>
-            I&apos;m particularly interested in artificial intelligence, startups,
-            economics, and politics.
+            I&apos;m particularly interested in artificial intelligence,
+            startups, economics, and politics.
           </p>
 
           <p>
@@ -83,20 +87,14 @@ export default function Home() {
 
         <div>
           <h3 className="mb-3">
-            <strong>Essays</strong>
+            <strong>Writings</strong>
           </h3>
           <ul className="list-disc ml-6">
             <li>
-              <Link href="/neuralese">
-                <em>Neuralese</em>
-              </Link>
+              <Link href="/neuralese">Neuralese</Link>
             </li>
-            <li>
-              <em>Northern Virginia&apos;s Brain Drain Problem</em> (Draft)
-            </li>
-            <li>
-              <em>Dead College Theory</em> (Draft)
-            </li>
+            <li>Northern Virginia&apos;s Brain Drain Problem (Draft)</li>
+            <li>Dead College Theory (Draft)</li>
           </ul>
         </div>
       </div>
