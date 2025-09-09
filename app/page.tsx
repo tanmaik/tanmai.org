@@ -13,8 +13,8 @@ export default function Home() {
             </ViewTransition>
 
             <p className="font-normal text-black/70 dark:text-white/85">
-              I&apos;m currently in my third year studying CS and Math @ UVA.
-              Previously, I&apos;ve worked at{" "}
+              I&apos;m a third year studying CS and Math at UVA. Previously, I
+              graduated from TJHSST and have worked at{" "}
               <a
                 href="https://cisco.com"
                 target="_blank"
@@ -41,7 +41,7 @@ export default function Home() {
               >
                 Suitable
               </a>
-              , founded{" "}
+              . I founded{" "}
               <a
                 href="https://gradsteps.com"
                 target="_blank"
@@ -50,23 +50,23 @@ export default function Home() {
               >
                 GradSteps
               </a>
-              , and graduated from TJHSST.
+              , along with 84 other businesses (82 of which have failed).
             </p>
 
             <p className="font-normal text-black/70 dark:text-white/85">
-              Interests include artificial intelligence, startups, economics,
-              and politics. I&apos;ve started 85 businesses and have failed at
-              83.
+              My interests include artificial intelligence, startups, economics, and
+              politics.
             </p>
 
             <p className="font-normal text-black/70 dark:text-white/85">
+              You can reach me at{" "}
               <a
                 href="mailto:tanmai.kalisipudi@gmail.com?subject=Resume Request&body=Hi Tanmai,%0D%0A%0D%0AI would like to request a copy of your resume.%0D%0A%0D%0AThank you!"
                 className="text-black/50 dark:text-white/65 underline transition-colors hover:text-black/80 dark:hover:text-white/95"
               >
-                Email me
+                tanmai.kalisipudi@gmail.com
               </a>{" "}
-              for my resume or find me on{" "}
+              or find me on{" "}
               <a
                 href="https://github.com/tanmaik"
                 target="_blank"
