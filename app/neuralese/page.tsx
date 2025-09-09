@@ -3,7 +3,7 @@ import { unstable_ViewTransition as ViewTransition } from "react";
 import { type Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Neuralese",
+  title: "TBD",
 };
 
 export default function NeuralePage() {
@@ -21,7 +21,10 @@ export default function NeuralePage() {
 
             <div className="space-y-0">
               <h1 className="font-medium text-black/85 dark:text-white/95">
-                Neuralese
+                TBD
+                <span className="ml-2 text-xs bg-black/10 dark:bg-white/10 text-black/60 dark:text-white/60 px-1.5 py-0.5 rounded">
+                  DRAFT
+                </span>
               </h1>
               <p className="font-normal text-black/50 dark:text-white/65">
                 00/00
