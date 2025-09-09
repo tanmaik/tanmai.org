@@ -7,8 +7,8 @@ export default function Home() {
 
       <div className="mb-4 space-y-4">
         <p>
-          I&apos;m currently in my third year studying CS and Math @ UVA.
-          Previously, I&apos;ve worked at{" "}
+          I&apos;m a third year studying CS and Math at UVA. Previously, I
+          graduated from TJHSST and have worked at{" "}
           <a href="https://cisco.com" target="_blank" rel="noopener noreferrer">
             Cisco
           </a>
@@ -28,7 +28,7 @@ export default function Home() {
           >
             Suitable
           </a>
-          , founded{" "}
+          . I founded{" "}
           <a
             href="https://gradsteps.com"
             target="_blank"
@@ -36,9 +36,12 @@ export default function Home() {
           >
             GradSteps
           </a>
-          , and graduated from TJHSST. My interests include artificial
-          intelligence, startups, economics, and politics. I&apos;ve started 85
-          businesses and have failed at 83.
+          , along with 84 other businesses (82 of which have failed).
+        </p>
+
+        <p>
+          My interests include artificial intelligence, startups, economics, and
+          politics.
         </p>
       </div>
       {/* 
@@ -55,14 +58,11 @@ export default function Home() {
 
       <div>
         <p>
-          Reach me at{" "}
+          You can reach me at{" "}
           <a href="mailto:tanmai.kalisipudi@gmail.com?subject=Resume Request&body=Hi Tanmai,%0D%0A%0D%0AI would like to request a copy of your resume.%0D%0A%0D%0AThank you!">
             tanmai.kalisipudi@gmail.com
-          </a>
-          .
-        </p>
-        <p>
-          Find me on{" "}
+          </a>{" "}
+          or find me on{" "}
           <a
             href="https://github.com/tanmaik"
             target="_blank"
