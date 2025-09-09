@@ -99,48 +99,15 @@ export default function Home() {
 
           <div className="space-y-3 mt-10">
             <h2 className="font-medium text-black/85 dark:text-white/95">
-              Library
+              Writings
             </h2>
 
             <hr className="border-black/10 dark:border-white/10" />
 
             <div className="space-y-1">
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-1 px-2 -mx-2 rounded opacity-60 cursor-default gap-1 sm:gap-0">
-                <h3 className="font-medium text-black/85 dark:text-white/95">
-                  Northern Virginia&apos;s Brain Drain Problem
-                  <span className="ml-2 text-xs bg-black/10 dark:bg-white/10 text-black/60 dark:text-white/60 px-1.5 py-0.5 rounded">
-                    DRAFT
-                  </span>
-                </h3>
-                <div className="flex items-center gap-4 text-xs">
-                  <span className="text-xs text-black/50 dark:text-white/65">
-                    Politics
-                  </span>
-                  <span className="text-xs text-black/50 dark:text-white/65">
-                    00/00
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-1 px-2 -mx-2 rounded opacity-60 cursor-default gap-1 sm:gap-0">
-                <h3 className="font-medium text-black/85 dark:text-white/95">
-                  Dead College Theory
-                  <span className="ml-2 text-xs bg-black/10 dark:bg-white/10 text-black/60 dark:text-white/60 px-1.5 py-0.5 rounded">
-                    DRAFT
-                  </span>
-                </h3>
-                <div className="flex items-center gap-4 text-xs">
-                  <span className="text-xs text-black/50 dark:text-white/65">
-                    Education
-                  </span>
-                  <span className="text-xs text-black/50 dark:text-white/65">
-                    00/00
-                  </span>
-                </div>
-              </div>
-
-              <div
-                className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-1 px-2 -mx-2 rounded opacity-60 cursor-default gap-1 sm:gap-0"
+              <a
+                href="/neuralese"
+                className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-1 px-2 -mx-2 rounded hover:bg-black/5 dark:hover:bg-white/5 transition-colors gap-1 sm:gap-0"
               >
                 <h3 className="font-medium text-black/85 dark:text-white/95">
                   Neuralese
@@ -156,7 +123,7 @@ export default function Home() {
                     00/00
                   </span>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
