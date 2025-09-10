@@ -14,14 +14,23 @@ export default function Home() {
 
             <p className="font-normal text-black/70 dark:text-white/85">
               I&apos;m a third year studying CS and Math at UVA. Previously, I
-              graduated from TJHSST and have worked at{" "}
+              graduated from{" "}
+              <a
+                href="https://tjhsst.fcps.edu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black/50 dark:text-white/65 underline transition-colors hover:text-black/80 dark:hover:text-white/95"
+              >
+                TJHSST ↗
+              </a>{" "}
+              and have worked at{" "}
               <a
                 href="https://cisco.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black/50 dark:text-white/65 underline transition-colors hover:text-black/80 dark:hover:text-white/95"
               >
-                Cisco
+                Cisco ↗
               </a>
               ,{" "}
               <a
@@ -30,7 +39,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-black/50 dark:text-white/65 underline transition-colors hover:text-black/80 dark:hover:text-white/95"
               >
-                Lineaje
+                Lineaje ↗
               </a>
               , and{" "}
               <a
@@ -39,7 +48,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-black/50 dark:text-white/65 underline transition-colors hover:text-black/80 dark:hover:text-white/95"
               >
-                Suitable
+                Suitable ↗
               </a>
               . I founded{" "}
               <a
@@ -48,7 +57,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-black/50 dark:text-white/65 underline transition-colors hover:text-black/80 dark:hover:text-white/95"
               >
-                GradSteps
+                GradSteps ↗
               </a>
               , along with 28 other businesses (26 of which have failed).
             </p>
@@ -73,7 +82,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-black/50 dark:text-white/65 underline transition-colors hover:text-black/80 dark:hover:text-white/95"
               >
-                GitHub
+                GitHub ↗
               </a>
               ,{" "}
               <a
@@ -82,7 +91,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-black/50 dark:text-white/65 underline transition-colors hover:text-black/80 dark:hover:text-white/95"
               >
-                LinkedIn
+                LinkedIn ↗
               </a>
               , and{" "}
               <a
@@ -91,7 +100,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-black/50 dark:text-white/65 underline transition-colors hover:text-black/80 dark:hover:text-white/95"
               >
-                HuggingFace
+                HuggingFace ↗
               </a>
               .
             </p>
