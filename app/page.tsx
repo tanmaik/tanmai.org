@@ -2,9 +2,10 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-black font-mono p-4">
       <div>
-        <div>Tanmai Kalisipudi</div>
-        <div className="mt-4">
-          I'm a third year studying CS and Math at UVA. Previously, I graduated from{" "}
+        <div>{"> "}Tanmai Kalisipudi</div>
+        <br />
+        <div>
+          {"> "}I'm a third year studying CS and Math at UVA. Previously, I graduated from{" "}
           <a href="https://tjhsst.fcps.edu" target="_blank" rel="noopener noreferrer" className="underline">
             TJHSST
           </a>{" "}
@@ -26,11 +27,13 @@ export default function Home() {
           </a>
           , along with 28 other businesses (26 of which have failed).
         </div>
-        <div className="mt-4">
-          My interests include artificial intelligence, startups, economics, and politics.
+        <br />
+        <div>
+          {"> "}My interests include artificial intelligence, startups, economics, and politics.
         </div>
-        <div className="mt-4">
-          You can reach me at{" "}
+        <br />
+        <div>
+          {"> "}You can reach me at{" "}
           <a href="mailto:tanmai.kalisipudi@gmail.com" className="underline">
             tanmai.kalisipudi@gmail.com
           </a>{" "}
@@ -47,6 +50,11 @@ export default function Home() {
             HuggingFace
           </a>
           .
+        </div>
+        <br />
+        <div>
+          {"> "}
+          <span className="animate-pulse">▊</span>
         </div>
       </div>
     </div>
