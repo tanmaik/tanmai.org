@@ -2,6 +2,14 @@
 
 @custom-variant dark (@media (prefers-color-scheme: dark));
 
+@font-face {
+  font-family: 'Bitstream Iowan Old Style';
+  src: url('/fonts/bitstream-iowan-old-style-italic-bt-586c3740dc396.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -138,5 +146,7 @@ html {
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Bitstream Iowan Old Style', serif;
+    font-style: italic;
   }
 }
