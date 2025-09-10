@@ -7,7 +7,7 @@ export default function Home() {
         <div className="w-full max-w-lg space-y-8">
           <div className="space-y-2">
             <ViewTransition name="page-title">
-              <h1 className="font-medium text-black">
+              <h1 className="text-black">
                 Tanmai Kalisipudi
               </h1>
             </ViewTransition>
@@ -19,45 +19,45 @@ export default function Home() {
                 href="https://tjhsst.fcps.edu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black underline transition-colors hover:text-black/80"
+                className="text-gray-600 underline transition-colors hover:text-black"
               >
-                TJHSST ↗
+                TJHSST
               </a>{" "}
               and have worked at{" "}
               <a
                 href="https://cisco.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black underline transition-colors hover:text-black/80"
+                className="text-gray-600 underline transition-colors hover:text-black"
               >
-                Cisco ↗
+                Cisco
               </a>
               ,{" "}
               <a
                 href="https://lineaje.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black underline transition-colors hover:text-black/80"
+                className="text-gray-600 underline transition-colors hover:text-black"
               >
-                Lineaje ↗
+                Lineaje
               </a>
               , and{" "}
               <a
                 href="https://suitable.co"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black underline transition-colors hover:text-black/80"
+                className="text-gray-600 underline transition-colors hover:text-black"
               >
-                Suitable ↗
+                Suitable
               </a>
               . I founded{" "}
               <a
                 href="https://gradsteps.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black underline transition-colors hover:text-black/80"
+                className="text-gray-600 underline transition-colors hover:text-black"
               >
-                GradSteps ↗
+                GradSteps
               </a>
               , along with 28 other businesses (26 of which have failed).
             </p>
@@ -71,7 +71,7 @@ export default function Home() {
               You can reach me at{" "}
               <a
                 href="mailto:tanmai.kalisipudi@gmail.com?subject=Resume Request&body=Hi Tanmai,%0D%0A%0D%0AI would like to request a copy of your resume.%0D%0A%0D%0AThank you!"
-                className="text-black underline transition-colors hover:text-black/80"
+                className="text-gray-600 underline transition-colors hover:text-black"
               >
                 tanmai.kalisipudi@gmail.com
               </a>{" "}
@@ -80,27 +80,27 @@ export default function Home() {
                 href="https://github.com/tanmaik"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black underline transition-colors hover:text-black/80"
+                className="text-gray-600 underline transition-colors hover:text-black"
               >
-                GitHub ↗
+                GitHub
               </a>
               ,{" "}
               <a
                 href="https://linkedin.com/in/tanmaikalisipudi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black underline transition-colors hover:text-black/80"
+                className="text-gray-600 underline transition-colors hover:text-black"
               >
-                LinkedIn ↗
+                LinkedIn
               </a>
               , and{" "}
               <a
                 href="https://huggingface.co/tanmaik"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black underline transition-colors hover:text-black/80"
+                className="text-gray-600 underline transition-colors hover:text-black"
               >
-                HuggingFace ↗
+                HuggingFace
               </a>
               .
             </p>

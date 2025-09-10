@@ -153,9 +153,7 @@ html {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background;
+    @apply bg-background text-black;
     font-family: 'Bitstream Iowan Old Style', serif;
-    font-style: normal;
-    color: black;
   }
 }
