@@ -36,7 +36,7 @@ export default function Home() {
           >
             GradSteps
           </a>
-          , along with 84 other businesses (82 of which have failed).
+          , along with 28 other businesses (26 of which have failed).
         </p>
 
         <p>
