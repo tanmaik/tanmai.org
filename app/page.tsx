@@ -7,7 +7,7 @@ export default function Home() {
         <div className="w-full max-w-lg space-y-8">
           <div className="space-y-2">
             <ViewTransition name="page-title">
-              <h1 className="text-black">
+              <h1 className="text-black font-bold">
                 Tanmai Kalisipudi
               </h1>
             </ViewTransition>
