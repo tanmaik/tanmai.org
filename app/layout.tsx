@@ -30,7 +30,7 @@ export default function RootLayout({
         />
         <meta name="msapplication-navbutton-color" content="#000000" />
       </head>
-      <body className="text-sm leading-relaxed pb-16 bg-white dark:bg-black/95 transition-colors">
+      <body className=" leading-relaxed pb-16 bg-white dark:bg-black/95 transition-colors">
         <PageTransition>{children}</PageTransition>
       </body>
     </html>
