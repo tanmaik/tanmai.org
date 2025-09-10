@@ -1,6 +1,42 @@
-import { type Metadata } from "next";
+import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
-import PageTransition from "@/components/PageTransition";
+
+const iowaOldStyle = localFont({
+  src: [
+    {
+      path: "../public/fonts/bitstream-iowan-old-style-bt-586c36a8d7712.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/bitstream-iowan-old-style-italic-bt-586c3740dc396.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/bitstream-iowan-old-style-bold-bt-586c371d8d669.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/bitstream-iowan-old-style-bold-italic-bt-586c37701cb62.ttf",
+      weight: "700",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/bitstream-iowan-old-style-black-bt-586c36e930225.ttf",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/bitstream-iowan-old-style-black-italic-bt-586c378f12ca1.ttf",
+      weight: "900",
+      style: "italic",
+    },
+  ],
+  variable: "--font-iowa-old-style",
+});
 
 export const metadata: Metadata = {
   title: "Tanmai Kalisipudi",
@@ -13,26 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <meta
-          name="theme-color"
-          content="#ffffff"
-          media="(prefers-color-scheme: light)"
-        />
-        <meta
-          name="theme-color"
-          content="#000000"
-          media="(prefers-color-scheme: dark)"
-        />
-        <meta
-          name="apple-mobile-web-app-status-bar-style"
-          content="black-translucent"
-        />
-        <meta name="msapplication-navbutton-color" content="#000000" />
-      </head>
-      <body className=" leading-relaxed pb-16 bg-white dark:bg-black/95 transition-colors">
-        <PageTransition>{children}</PageTransition>
-      </body>
+      <body className={`${iowaOldStyle.variable}`}>{children}</body>
     </html>
   );
 }
