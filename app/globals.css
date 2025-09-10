@@ -4,7 +4,15 @@
 
 @font-face {
   font-family: 'Bitstream Iowan Old Style';
-  src: url('/fonts/bitstream-iowan-old-style-italic-bt-586c3740dc396.ttf') format('truetype');
+  src: url('/fonts/iowan-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bitstream Iowan Old Style';
+  src: url('/fonts/iowan-italic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -145,8 +153,9 @@ html {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background;
     font-family: 'Bitstream Iowan Old Style', serif;
-    font-style: italic;
+    font-style: normal;
+    color: black;
   }
 }
