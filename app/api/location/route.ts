@@ -15,6 +15,20 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
     
+    // Get place name from Google Places API
+    let placeName = 'Unknown location'
+    try {
+      const placesUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${body.latitude},${body.longitude}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`
+      const placesResponse = await fetch(placesUrl)
+      const placesData = await placesResponse.json()
+      
+      if (placesData.results && placesData.results.length > 0) {
+        placeName = placesData.results[0].formatted_address
+      }
+    } catch (placeError) {
+      console.warn('Failed to get place name:', placeError)
+    }
+    
     const locationData = {
       id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       timestamp: new Date().toISOString(),
@@ -25,6 +39,7 @@ export async function POST(request: NextRequest) {
       speed: body.speed,
       heading: body.heading,
       deviceId: body.deviceId,
+      place: placeName
     }
 
     // Save to Redis

@@ -34,6 +34,7 @@ interface Location {
   speed: number
   heading: number
   deviceId: string
+  place: string
 }
 
 interface MapComponentProps {
@@ -71,11 +72,13 @@ function MapComponent({ locations }: MapComponentProps) {
       const infoWindow = new window.google.maps.InfoWindow({
         content: `
           <div style="font-family: system-ui, sans-serif;">
-            <h3 style="margin: 0 0 8px 0; color: #1a73e8;">Location ${index + 1}</h3>
+            <h3 style="margin: 0 0 8px 0; color: #1a73e8;">${location.place}</h3>
             <p style="margin: 2px 0;"><strong>Time:</strong> ${new Date(location.timestamp).toLocaleString()}</p>
             <p style="margin: 2px 0;"><strong>Coordinates:</strong> ${location.latitude.toFixed(6)}, ${location.longitude.toFixed(6)}</p>
             <p style="margin: 2px 0;"><strong>Accuracy:</strong> ${location.accuracy.toFixed(1)}m</p>
-            ${location.speed > 0 ? `<p style="margin: 2px 0;"><strong>Speed:</strong> ${(location.speed * 2.237).toFixed(1)} mph</p>` : ''}
+            <p style="margin: 2px 0;"><strong>Speed:</strong> ${location.speed > 0 ? `${(location.speed * 2.237).toFixed(1)} mph` : '0 mph'}</p>
+            <p style="margin: 2px 0;"><strong>Heading:</strong> ${location.heading.toFixed(0)}°</p>
+            <p style="margin: 2px 0;"><strong>Altitude:</strong> ${location.altitude.toFixed(1)}m</p>
           </div>
         `
       })
@@ -209,13 +212,16 @@ export default function LocationsPage() {
                           Time
                         </th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                          Location
+                          Place
                         </th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                          Accuracy
+                          Coordinates
                         </th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                           Speed
+                        </th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Accuracy
                         </th>
                       </tr>
                     </thead>
@@ -225,14 +231,17 @@ export default function LocationsPage() {
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                             {new Date(location.timestamp).toLocaleString()}
                           </td>
+                          <td className="px-6 py-4 text-sm text-gray-900">
+                            {location.place}
+                          </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                             {location.latitude.toFixed(6)}, {location.longitude.toFixed(6)}
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                            {location.accuracy.toFixed(1)}m
+                            {location.speed > 0 ? `${(location.speed * 2.237).toFixed(1)} mph` : '0 mph'}
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                            {location.speed > 0 ? `${(location.speed * 2.237).toFixed(1)} mph` : '0 mph'}
+                            {location.accuracy.toFixed(1)}m
                           </td>
                         </tr>
                       ))}
