@@ -12,14 +12,14 @@ interface Photo {
   deviceId: string
   size: number
   contentType: string
-  hasData: boolean
+  blobUrl?: string
 }
 
 export default function PhotosPage() {
   const [photos, setPhotos] = useState<Photo[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null)
+  const [selectedPhotoUrl, setSelectedPhotoUrl] = useState<string | null>(null)
 
   useEffect(() => {
     async function fetchPhotos() {
@@ -45,18 +45,6 @@ export default function PhotosPage() {
     return () => clearInterval(interval)
   }, [])
 
-  async function loadFullPhoto(photoId: string) {
-    try {
-      const response = await fetch(`/api/photo/${photoId}`)
-      const data = await response.json()
-      
-      if (data.success && data.photo) {
-        setSelectedPhoto(data.photo.data)
-      }
-    } catch {
-      console.error('Failed to load full photo')
-    }
-  }
 
   if (loading) {
     return (
@@ -109,13 +97,28 @@ export default function PhotosPage() {
                   <div 
                     key={photo.id} 
                     className="bg-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                    onClick={() => loadFullPhoto(photo.id)}
+                    onClick={() => photo.blobUrl && setSelectedPhotoUrl(photo.blobUrl)}
                   >
-                    {/* Photo Placeholder */}
-                    <div className="aspect-square bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                      <svg className="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
+                    {/* Photo Thumbnail */}
+                    <div className="aspect-square bg-gradient-to-br from-blue-100 to-purple-100 relative overflow-hidden">
+                      {photo.blobUrl ? (
+                        <>
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img 
+                            src={photo.blobUrl}
+                            alt={`Photo from ${new Date(photo.timestamp).toLocaleDateString()}`}
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
+                          <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-colors" />
+                        </>
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center">
+                          <svg className="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                        </div>
+                      )}
                     </div>
                     
                     {/* Photo Info */}
@@ -195,15 +198,15 @@ export default function PhotosPage() {
       </div>
 
       {/* Full Photo Modal */}
-      {selectedPhoto && (
+      {selectedPhotoUrl && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
-          onClick={() => setSelectedPhoto(null)}
+          onClick={() => setSelectedPhotoUrl(null)}
         >
           <div className="max-w-4xl max-h-[90vh] overflow-auto">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
-              src={`data:image/jpeg;base64,${selectedPhoto}`} 
+              src={selectedPhotoUrl} 
               alt="Full size photo"
               className="max-w-full h-auto rounded-lg"
             />

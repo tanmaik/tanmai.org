@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient, RedisClientType } from 'redis'
+import { put } from '@vercel/blob'
 
 let redis: RedisClientType | null = null
 
@@ -27,32 +28,38 @@ export async function POST(request: NextRequest) {
     
     const metadata = JSON.parse(metadataStr)
     
-    // Convert photo to base64 for storage
-    const photoBytes = await photoFile.arrayBuffer()
-    const photoBase64 = Buffer.from(photoBytes).toString('base64')
+    // Generate unique ID for this photo
+    const photoId = `photo-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+    
+    // Upload photo to Vercel Blob
+    const blob = await put(`sonder/photos/${photoId}.jpg`, photoFile, {
+      access: 'public',
+      addRandomSuffix: false
+    })
     
     const photoData = {
-      id: `photo-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      id: photoId,
       timestamp: new Date(metadata.timestamp * 1000).toISOString(),
       location: metadata.location,
       deviceId: metadata.deviceId,
       size: metadata.size,
-      data: photoBase64,
+      blobUrl: blob.url,
       contentType: photoFile.type
     }
     
-    // Save to Redis
+    // Save metadata to Redis (without image data)
     const client = await getRedisClient()
     await client.lPush('photos', JSON.stringify(photoData))
     
-    // Keep only last 100 photos to avoid storage issues
-    await client.lTrim('photos', 0, 99)
+    // Keep only last 1000 photos metadata (no longer limited by size)
+    await client.lTrim('photos', 0, 999)
     
-    console.log('📸 Photo saved to Redis:', {
+    console.log('📸 Photo saved:', {
       id: photoData.id,
       timestamp: photoData.timestamp,
       size: photoData.size,
-      location: photoData.location
+      location: photoData.location,
+      blobUrl: photoData.blobUrl
     })
     
     return NextResponse.json({ 
@@ -74,13 +81,7 @@ export async function GET() {
     const client = await getRedisClient()
     const photos = await client.lRange('photos', 0, -1)
     const parsedPhotos = photos.map((photo: string) => {
-      const photoData = JSON.parse(photo)
-      // Don't send the full base64 data in the list, just metadata
-      const { data, ...metadata } = photoData
-      return {
-        ...metadata,
-        hasData: !!data
-      }
+      return JSON.parse(photo)
     })
     
     return NextResponse.json({
