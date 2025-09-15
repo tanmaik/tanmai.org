@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <div
@@ -16,59 +18,105 @@ export default function Home() {
           <p className="mt-2">
             My passions include startups, AI, finance, government, and running.
             I&apos;ve worked at{" "}
-            <a
+            <Link
               href="https://www.cisco.com"
               className="text-blue-600 visited:text-purple-800 underline"
               target="_blank"
               rel="noopener noreferrer"
             >
               Cisco
-            </a>
+            </Link>
             ,{" "}
-            <a
+            <Link
               href="https://lineaje.com"
               className="text-blue-600 visited:text-purple-800 underline"
               target="_blank"
               rel="noopener noreferrer"
             >
               Lineaje
-            </a>
+            </Link>
             , and{" "}
-            <a
+            <Link
               href="https://www.suitable.co"
               className="text-blue-600 visited:text-purple-800 underline"
               target="_blank"
               rel="noopener noreferrer"
             >
               Suitable
-            </a>
+            </Link>
             , and also created several businesses of my own.
+          </p>
+          <p className="mt-2">
+            Reach me at my{" "}
+            <Link
+              href="mailto:tanmaikalisipudi@gmail.com"
+              className="text-blue-600 visited:text-purple-800 underline"
+            >
+              email
+            </Link>
+            {" "}or find me on{" "}
+            <Link
+              href="https://github.com/tanmaik"
+              className="text-blue-600 visited:text-purple-800 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </Link>
+            {", "}
+            <Link
+              href="https://www.linkedin.com/in/tanmaikalisipudi/"
+              className="text-blue-600 visited:text-purple-800 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </Link>
+            {", "}
+            <Link
+              href="https://huggingface.co/tanmaik"
+              className="text-blue-600 visited:text-purple-800 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              HuggingFace
+            </Link>
+            {", or "}
+            <Link
+              href="https://x.com/nottanmai"
+              className="text-blue-600 visited:text-purple-800 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              X
+            </Link>
+            .
           </p>
         </div>
         <p className="mt-4">Some extracurriculars: </p>
         <ul className="list-disc mt-2 pl-6 ">
           <li>
             Sold AI-powered{" "}
-            <a
+            <Link
               href="https://gradsteps.com"
               className="text-blue-600 visited:text-purple-800 underline"
               target="_blank"
               rel="noopener noreferrer"
             >
               degree planning software
-            </a>{" "}
+            </Link>{" "}
             to the University of Pittsburgh
           </li>
           <li>
             Built{" "}
-            <a
+            <Link
               href="https://govey.org"
               className="text-blue-600 visited:text-purple-800 underline"
               target="_blank"
               rel="noopener noreferrer"
             >
               AI agents
-            </a>{" "}
+            </Link>{" "}
             that accelerate deal flow for defense contractors
           </li>
           <li>
@@ -76,14 +124,14 @@ export default function Home() {
           </li>
           <li>
             Created a platform to help students from my{" "}
-            <a
+            <Link
               href="https://tjhsst.fcps.edu"
               className="text-blue-600 visited:text-purple-800 underline"
               target="_blank"
               rel="noopener noreferrer"
             >
               high school
-            </a>{" "}
+            </Link>{" "}
             organize carpools
           </li>
 
@@ -94,14 +142,14 @@ export default function Home() {
           <li>Hosted financial literacy webinars for high schoolers</li>
           <li>
             Founded a{" "}
-            <a
+            <Link
               href="https://www.nest4us.org"
               className="text-blue-600 visited:text-purple-800 underline"
               target="_blank"
               rel="noopener noreferrer"
             >
               nonprofit
-            </a>{" "}
+            </Link>{" "}
             to teach young people to care for their local environment
           </li>
           <li>Ran sub-3:45 marathon and a sub-5:00 minute mile</li>
