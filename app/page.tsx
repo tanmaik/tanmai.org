@@ -93,7 +93,7 @@ export default function Home() {
             .
           </p>
         </div>
-        <p className="mt-3">In the past, I've:</p>
+        <p className="mt-3">In the past, I&apos;ve:</p>
         <ul className="list-disc mt-2 pl-6 ">
           <li>
             Sold AI-powered{" "}
@@ -139,7 +139,7 @@ export default function Home() {
             teaching kids to care for their environment
           </li>
           <li>Ran a sub 3:45 marathon and sub 5 minute mile</li>
-          <li>Runner up&apos;d in my 4th grade spelling bee</li>
+          <li>Came runner up in my 4th grade spelling bee</li>
         </ul>
         <p className="mt-3">
           Currently, I&apos;m exploring reinforcement learning in AI.
