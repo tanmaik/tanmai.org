@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
             School.
           </p>
           <p className="mt-2">
-            My passions include startups, AI, finance, government, and running.
+            My passions include AI, startups, finance, government, and running.
             I&apos;ve worked at{" "}
             <Link
               href="https://www.cisco.com"
@@ -53,8 +53,8 @@ export default function Home() {
               className="text-blue-600 visited:text-purple-800 underline"
             >
               email
-            </Link>
-            {" "}or find me on{" "}
+            </Link>{" "}
+            or find me on{" "}
             <Link
               href="https://github.com/tanmaik"
               className="text-blue-600 visited:text-purple-800 underline"
@@ -93,7 +93,7 @@ export default function Home() {
             .
           </p>
         </div>
-        <p className="mt-4">Some extracurriculars: </p>
+        <p className="mt-3">In the past, I've:</p>
         <ul className="list-disc mt-2 pl-6 ">
           <li>
             Sold AI-powered{" "}
@@ -103,9 +103,9 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              degree planning software
+              degree planning tools
             </Link>{" "}
-            to the University of Pittsburgh
+            to Pitt
           </li>
           <li>
             Built{" "}
@@ -119,27 +119,13 @@ export default function Home() {
             </Link>{" "}
             that accelerate deal flow for defense contractors
           </li>
+          <li>Designed EEG goggles that yell at sleepy drivers</li>
+          <li>Launched a carpool app for my high school</li>
+          <li>Tutored 500+ hours of math and physics</li>
           <li>
-            Designed electroencephalography goggles to yell at sleepy drivers
+            Ran investing webinars during the pandemic retail investing boom
+            investing boom
           </li>
-          <li>
-            Created a platform to help students from my{" "}
-            <Link
-              href="https://tjhsst.fcps.edu"
-              className="text-blue-600 visited:text-purple-800 underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              high school
-            </Link>{" "}
-            organize carpools
-          </li>
-
-          <li>
-            Organized 500+ hours of math and physics lessons in my private
-            tutoring business
-          </li>
-          <li>Hosted financial literacy webinars for high schoolers</li>
           <li>
             Founded a{" "}
             <Link
@@ -150,12 +136,14 @@ export default function Home() {
             >
               nonprofit
             </Link>{" "}
-            to teach young people to care for their local environment
+            teaching kids to care for their environment
           </li>
-          <li>Ran sub-3:45 marathon and a sub-5:00 minute mile</li>
-          <li>(Somehow) attained a third-degree black belt in taekwondo</li>
-          <li>Been buying $META since 2022</li>
+          <li>Ran a sub 3:45 marathon and sub 5 minute mile</li>
+          <li>Runner up&apos;d in my 4th grade spelling bee</li>
         </ul>
+        <p className="mt-3">
+          Currently, I&apos;m exploring reinforcement learning in AI.
+        </p>
       </div>
     </div>
   );
