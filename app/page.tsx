@@ -103,9 +103,9 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              degree planning tools
+              degree planning software
             </Link>{" "}
-            to Pitt
+            to the University of Pittsburgh
           </li>
           <li>
             Built{" "}
@@ -119,12 +119,16 @@ export default function Home() {
             </Link>{" "}
             that accelerate deal flow for defense contractors
           </li>
-          <li>Designed EEG goggles that yell at sleepy drivers</li>
-          <li>Launched a carpool app for my high school</li>
-          <li>Tutored 500+ hours of math and physics</li>
+          <li>
+            Designed electroencephalography goggles that yell at sleepy drivers
+          </li>
+          <li>
+            Created a platform for my high school to help students organize
+            carpools
+          </li>
+          <li>Organized 500+ hours of math and physics tutoring</li>
           <li>
             Ran investing webinars during the pandemic retail investing boom
-            investing boom
           </li>
           <li>
             Founded a{" "}
