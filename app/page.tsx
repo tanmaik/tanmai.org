@@ -2,10 +2,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div
-      className="flex justify-center "
-      style={{ fontFamily: "Times New Roman, serif" }}
-    >
+    <div className="flex justify-center ">
       <div className="p-4 mt-8 sm:mt-16 max-w-xl">
         <h1 className="font-semibold">Tanmai Kalisipudi</h1>
         <div className="mt-4">
