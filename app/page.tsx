@@ -143,7 +143,16 @@ export default function Home() {
           <li>Came runner up in my 4th grade spelling bee</li>
         </ul>
         <p className="mt-3">
-          Currently, I&apos;m exploring reinforcement learning in AI.
+          Currently, I&apos;m exploring reinforcement learning in LLMs. I will be sharing my findings in technical writings and on my{" "}
+            <Link
+              href="https://youtube.com/@tkalisipudi"
+              className="text-blue-600 visited:text-purple-800 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              YouTube
+            </Link>
+            .
         </p>
       </div>
     </div>
