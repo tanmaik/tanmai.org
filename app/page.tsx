@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="flex justify-center ">
       <div className="p-4 mt-8 sm:mt-16 max-w-xl">
-        <h1 className="font-semibold">Tanmai Kalisipudi</h1>
+        <h1 className="font-semibold text-2xl">Tanmai Kalisipudi</h1>
         <div className="mt-4">
           <p>
             Hi, I&apos;m Tanmai! I&apos;m 20 years old and grew up in Northern
