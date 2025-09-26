@@ -14,7 +14,6 @@ export default function StravaWidget() {
         height='454'
         width='300'
         frameBorder='0'
-        allowtransparency='true'
         scrolling='no'
         src='https://www.strava.com/athletes/61986063/latest-rides/c02e5ce47f3711b5d45a8bcf8bdf2afae25853be'
         style={{
